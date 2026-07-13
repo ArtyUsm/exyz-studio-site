@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Game Asset Production — 2D Art &amp; Spine Animation for Mobile Games | EXYZ.Studio</title>
+<meta name="description" content="EXYZ.Studio produces concept art, character design, levels, and 2D Spine animations for mobile games — production-ready assets that bring your vision to life.">
+<link rel="canonical" href="https://www.exyz.studio/asset-production">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EXYZ.Studio">
+<meta property="og:title" content="Game Asset Production — 2D Art &amp; Spine Animation for Mobile Games | EXYZ.Studio">
+<meta property="og:description" content="EXYZ.Studio produces concept art, character design, levels, and 2D Spine animations for mobile games — production-ready assets that bring your vision to life.">
+<meta property="og:url" content="https://www.exyz.studio/asset-production">
+<meta property="og:image" content="https://www.exyz.studio/og-default.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Game Asset Production — 2D Art &amp; Spine Animation for Mobile Games | EXYZ.Studio">
+<meta name="twitter:description" content="EXYZ.Studio produces concept art, character design, levels, and 2D Spine animations for mobile games — production-ready assets that bring your vision to life.">
+<meta name="twitter:image" content="https://www.exyz.studio/og-default.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&amp;family=IBM+Plex+Sans:wght@400;500&amp;family=JetBrains+Mono:wght@400;500&amp;family=Gabarito:wght@700;800&amp;display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/@esotericsoftware/spine-player@4.2.*/dist/spine-player.css">
+<script src="https://unpkg.com/@esotericsoftware/spine-player@4.2.*/dist/iife/spine-player.js"></script>
+<style>
+.spine-mount .spine-player-controls{ display:none !important; }
+.spine-anim-prev:hover, .spine-anim-next:hover{ color:#eb6c2b !important; }
+@media (prefers-reduced-motion: reduce){ *{ animation:none !important; transition:none !important; } }
+.exyz-nav a:hover{ color:#f5f5f5 !important; }
+.exyz-btn-a:hover{ background:#ff7f3f !important; }
+image-slot{ display:block; }
+image-slot::part(frame){ background:#141416 !important; }
+[data-gallery-zoom] image-slot::part(image){ transition:transform .35s cubic-bezier(.22,.61,.36,1); }
+[data-gallery-zoom]:hover image-slot::part(image){ transform:translate(-50%,-50%) scale(1.06); }
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "EXYZ.Studio", "url": "https://www.exyz.studio/", "logo": "https://www.exyz.studio/logo.png", "description": "EXYZ.Studio designs 2D/3D game assets and produces video creatives, playable ads, and trailers for mobile game studios.", "areaServed": "Worldwide", "knowsAbout": ["Game asset production", "2D game art", "3D game art", "Video creatives for mobile games", "Playable ads", "UGC ads", "3D animation", "Motion graphics"], "sameAs": ["https://www.instagram.com/exyz.studio/"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "serviceType": "Game Asset Production", "provider": {"@type": "Organization", "name": "EXYZ.Studio", "url": "https://www.exyz.studio/"}, "areaServed": "Worldwide", "description": "Concept art, character design, levels, and 2D Spine animations for mobile games."}</script>
+</helmet>
+
+<a href="#main" style="position:absolute;left:-999px;top:0;background:#eb6c2b;color:#0a0a0b;padding:10px 16px;z-index:100;font-family:'JetBrains Mono',monospace;font-size:.76rem;text-decoration:none;">Skip to content</a>
+
+<div style="background:#0a0a0b; color:#f2f2f0; font-family:'IBM Plex Sans',-apple-system,sans-serif; font-size:16px; line-height:1.6; min-height:100vh;">
+
+  <header style="position:sticky;top:0;z-index:50;background:rgba(10,10,11,0.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,0.08);">
+    <div style="max-width:1240px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;height:78px;">
+      <a href="index.dc.html" style="display:flex;align-items:center;gap:10px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.1rem;letter-spacing:-0.01em;color:#f2f2f0;text-decoration:none;">
+        <img src="exyz-logo.png" alt="" style="width:30px;height:30px;display:block;" />EXYZ.STUDIO
+      </a>
+      <nav class="exyz-nav" aria-label="Primary" style="display:flex;gap:36px;align-items:center;">
+        <a href="asset-production.dc.html" aria-current="page" style="font-family:'JetBrains Mono',monospace;font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:#f2f2f0;text-decoration:none;transition:color .15s;">Asset Production</a>
+        <a href="video-creatives.dc.html" style="font-family:'JetBrains Mono',monospace;font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:#9b9b9b;text-decoration:none;transition:color .15s;">Video Creatives</a>
+        <a href="our-work.dc.html" style="font-family:'JetBrains Mono',monospace;font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:#9b9b9b;text-decoration:none;transition:color .15s;">Blog</a>
+        <a href="contact.dc.html" style="font-family:'JetBrains Mono',monospace;font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:#9b9b9b;text-decoration:none;transition:color .15s;">Contact</a>
+        <a href="contact.dc.html" class="exyz-btn-a" style="font-family:'JetBrains Mono',monospace;font-size:.74rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#0a0a0b;background:#eb6c2b;padding:11px 20px;border-radius:5px;text-decoration:none;transition:background .15s;">Start a Project</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section aria-label="Intro" style="max-width:1240px;margin:0 auto;padding:64px 32px 36px;">
+      <h1 style="font-family:'Space Grotesk',sans-serif;font-weight:800;line-height:1;letter-spacing:-0.02em;margin:0;font-size:clamp(2.6rem,6vw,4.6rem);text-transform:uppercase;">Asset Production</h1>
+      <p style="max-width:46ch;font-size:1.05rem;color:#b7b7b7;margin:22px 0 0;">From concept art and character design to detailed environments and fluid Spine animations — we create production-ready 2D game assets that bring your vision to life.</p>
+      <div style="display:flex;gap:28px;flex-wrap:wrap;margin-top:26px;">
+        <sc-for list="{{tags}}" as="tag" hint-placeholder-count="4">
+          <span style="display:flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:#9b9b9b;">
+            <span style="width:6px;height:6px;background:#eb6c2b;display:inline-block;"></span>{{tag}}
+          </span>
+        </sc-for>
+      </div>
+    </section>
+
+    <section aria-label="Character: Shiba" style="max-width:1240px;margin:0 auto;padding:0 32px 22px;">
+      <div style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:28px;">
+        <div style="margin-bottom:22px;">
+          <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1.05rem;margin:0;letter-spacing:.01em;">Character: Shiba</h2>
+          <span style="display: block; font-family: Gabarito; font-size: .68rem; letter-spacing: .06em; color: #7a7a7a; text-transform: uppercase; margin-top: 6px">Project: Shiba Story Go!</span>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:20px;">
+          <sc-for list="{{shibaSkins}}" as="skin" hint-placeholder-count="6">
+            <div data-gallery-zoom="" style="overflow:hidden;border-radius:8px;">
+              <image-slot id="{{skin.id}}" style="width:100%;height:auto;aspect-ratio:4/5;" shape="rect" fit="contain" placeholder="{{skin.ph}}"></image-slot>
+              <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:10px;">{{skin.name}}</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </section>
+
+    <section aria-label="Character breakdowns" style="max-width:1240px;margin:0 auto;padding:0 32px 22px;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:22px;">
+        <div style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:28px;">
+
+          <div style="display:grid;grid-template-columns:1fr 1.55fr;gap:18px;align-items:stretch;">
+            <div style="display:flex;flex-direction:column;">
+              <div style="margin-bottom:22px;">
+                <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1.05rem;margin:0;letter-spacing:.01em;">Character: Dragon Blacksmith</h2>
+                <span style="display: block; font-family: Gabarito; font-size: .68rem; letter-spacing: .06em; color: #7a7a7a; text-transform: uppercase; margin-top: 6px">Project: Shiba Story Go!</span>
+              </div>
+              <div data-gallery-zoom="" style="aspect-ratio:1/1;overflow:hidden;border-radius:8px;position:relative;">
+                <image-slot id="dragon-blacksmith-sketch" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="Dragon Blacksmith sketch, full body"></image-slot>
+              </div>
+              <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:10px;">Sketch</span>
+            </div>
+            <div style="display:flex;flex-direction:column;">
+              <div style="flex:1;position:relative;width:100%;background:#141416;border-radius:8px;overflow:hidden;">
+                <div class="spine-mount" data-spine-mount="main" style="position:absolute;inset:0;"></div>
+                <div class="spine-anim-switcher" data-spine-switcher="main" style="position:absolute;inset:0;z-index:3;display:flex;align-items:center;justify-content:space-between;padding:0 10px;box-sizing:border-box;pointer-events:none;">
+                  <button type="button" class="spine-anim-prev" data-spine-prev="main" aria-label="Previous animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
+                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1L1 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                  </button>
+                  <span class="spine-anim-label" data-spine-label="main" style="display:none;"></span>
+                  <button type="button" class="spine-anim-next" data-spine-next="main" aria-label="Next animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
+                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L1 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                  </button>
+                </div>
+              </div>
+              <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:10px;">Animated Final</span>
+            </div>
+          </div>
+        </div>
+        <div style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:28px;">
+
+          <div style="display:grid;grid-template-columns:1fr 1.55fr;gap:18px;align-items:stretch;">
+            <div style="display:flex;flex-direction:column;">
+              <div style="margin-bottom:22px;">
+                <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1.05rem;margin:0;letter-spacing:.01em;">Character: Trashbot</h2>
+                <span style="display: block; font-family: Gabarito; font-size: .68rem; letter-spacing: .06em; color: #7a7a7a; text-transform: uppercase; margin-top: 6px">Project: Trashbash Tripple Match 3D</span>
+              </div>
+              <div data-gallery-zoom="" style="aspect-ratio:1/1;overflow:hidden;border-radius:8px;position:relative;padding:8%;box-sizing:border-box;background:#141416;">
+                <image-slot id="trashbot-sketch" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="Trashbot sketch"></image-slot>
+              </div>
+              <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:10px;">Sketch</span>
+            </div>
+            <div style="display:flex;flex-direction:column;">
+              <div style="flex:1;position:relative;width:100%;background:#141416;border-radius:8px;overflow:hidden;">
+                <div class="spine-mount" data-spine-mount="trashbot" style="position:absolute;inset:0;"></div>
+                <div class="spine-anim-switcher" data-spine-switcher="trashbot" style="position:absolute;inset:0;z-index:3;display:flex;align-items:center;justify-content:space-between;padding:0 10px;box-sizing:border-box;pointer-events:none;">
+                  <button type="button" class="spine-anim-prev" data-spine-prev="trashbot" aria-label="Previous animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
+                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1L1 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                  </button>
+                  <span class="spine-anim-label" data-spine-label="trashbot" style="display:none;"></span>
+                  <button type="button" class="spine-anim-next" data-spine-next="trashbot" aria-label="Next animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
+                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L1 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                  </button>
+                </div>
+              </div>
+              <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:10px;">Animated Final</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-label="Level: Mystery Forest" style="max-width:1240px;margin:0 auto;padding:0 32px 22px;">
+      <div data-gallery-zoom="" style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;overflow:hidden;position:relative;">
+        <div style="position:absolute;top:20px;left:20px;z-index:2;background:rgba(10,10,11,0.82);backdrop-filter:blur(6px);border-radius:8px;padding:12px 18px;">
+          <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1rem;margin:0;letter-spacing:.01em;">Level: Mystery Forest</h2>
+          <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:.66rem;letter-spacing:.06em;color:#9b9b9b;text-transform:uppercase;margin-top:6px;">Project: Shiba Story Go!</span>
+        </div>
+        <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/2d-assets/Forest_Location.mp4" style="display:block;width:100%;height:auto;aspect-ratio:1168/618;object-fit:cover;" autoPlay="{{true}}" muted="{{true}}" loop="{{true}}" playsInline="{{true}}" preload="auto" ref="{{playVideo}}"></video>
+      </div>
+    </section>
+
+    <sc-for list="{{extraBatches}}" as="batch" hint-placeholder-count="0">
+      <section aria-label="More assets" style="max-width:1240px;margin:0 auto;padding:0 32px 22px;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:22px;">
+          <div style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:28px;">
+            <div style="display:grid;grid-template-columns:1fr 1.55fr;gap:18px;align-items:stretch;">
+              <div style="display:flex;flex-direction:column;">
+                <div style="margin-bottom:22px;">
+                  <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1.05rem;margin:0;letter-spacing:.01em;">{{batch.row1.leftName}}</h2>
+                  <span style="display: block; font-family: Gabarito; font-size: .68rem; letter-spacing: .06em; color: #7a7a7a; text-transform: uppercase; margin-top: 6px">{{batch.row1.leftProject}}</span>
+                </div>
+                <div data-gallery-zoom="" style="aspect-ratio:1/1;overflow:hidden;border-radius:8px;position:relative;">
+                  <image-slot id="{{batch.row1.leftSketchId}}" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="New sketch, full body"></image-slot>
+                </div>
+                <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:10px;">Sketch</span>
+              </div>
+              <sc-if value="{{batch.row1.leftSpineKey}}" hint-placeholder-val="{{false}}">
+                <div style="display:flex;flex-direction:column;">
+                  <div style="flex:1;position:relative;width:100%;background:#141416;border-radius:8px;overflow:hidden;">
+                    <div class="spine-mount" data-spine-mount="{{batch.row1.leftSpineKey}}" style="position:absolute;inset:0;"></div>
+                    <div class="spine-anim-switcher" data-spine-switcher="{{batch.row1.leftSpineKey}}" style="position:absolute;inset:0;z-index:3;display:flex;align-items:center;justify-content:space-between;padding:0 10px;box-sizing:border-box;pointer-events:none;">
+                      <button type="button" class="spine-anim-prev" data-spine-prev="{{batch.row1.leftSpineKey}}" aria-label="Previous animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1L1 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                      </button>
+                      <span class="spine-anim-label" data-spine-label="{{batch.row1.leftSpineKey}}" style="display:none;"></span>
+                      <button type="button" class="spine-anim-next" data-spine-next="{{batch.row1.leftSpineKey}}" aria-label="Next animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L1 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                      </button>
+                    </div>
+                  </div>
+                  <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:10px;">Animated Final</span>
+                </div>
+              </sc-if>
+              <sc-if value="{{batch.row1.leftNoSpine}}" hint-placeholder-val="{{true}}">
+                <div style="display:flex;flex-direction:column;">
+                  <div data-gallery-zoom="" style="aspect-ratio:1/1;overflow:hidden;border-radius:8px;position:relative;">
+                    <image-slot id="{{batch.row1.leftFinalId}}" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="New animated final, full body"></image-slot>
+                  </div>
+                  <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:10px;">Animated Final</span>
+                </div>
+              </sc-if>
+            </div>
+          </div>
+          <div style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:28px;">
+            <div style="display:grid;grid-template-columns:1fr 1.55fr;gap:18px;align-items:stretch;">
+              <div style="display:flex;flex-direction:column;">
+                <div style="margin-bottom:22px;">
+                  <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1.05rem;margin:0;letter-spacing:.01em;">{{batch.row1.rightName}}</h2>
+                  <span style="display: block; font-family: Gabarito; font-size: .68rem; letter-spacing: .06em; color: #7a7a7a; text-transform: uppercase; margin-top: 6px">{{batch.row1.rightProject}}</span>
+                </div>
+                <div data-gallery-zoom="" style="aspect-ratio:1/1;overflow:hidden;border-radius:8px;position:relative;">
+                  <image-slot id="{{batch.row1.rightSketchId}}" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="New sketch, full body"></image-slot>
+                </div>
+                <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:10px;">Sketch</span>
+              </div>
+              <sc-if value="{{batch.row1.rightSpineKey}}" hint-placeholder-val="{{false}}">
+                <div style="display:flex;flex-direction:column;">
+                  <div style="flex:1;position:relative;width:100%;background:#141416;border-radius:8px;overflow:hidden;">
+                    <div class="spine-mount" data-spine-mount="{{batch.row1.rightSpineKey}}" style="position:absolute;inset:0;"></div>
+                    <div class="spine-anim-switcher" data-spine-switcher="{{batch.row1.rightSpineKey}}" style="position:absolute;inset:0;z-index:3;display:flex;align-items:center;justify-content:space-between;padding:0 10px;box-sizing:border-box;pointer-events:none;">
+                      <button type="button" class="spine-anim-prev" data-spine-prev="{{batch.row1.rightSpineKey}}" aria-label="Previous animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1L1 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                      </button>
+                      <span class="spine-anim-label" data-spine-label="{{batch.row1.rightSpineKey}}" style="display:none;"></span>
+                      <button type="button" class="spine-anim-next" data-spine-next="{{batch.row1.rightSpineKey}}" aria-label="Next animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L1 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                      </button>
+                    </div>
+                  </div>
+                  <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:10px;">Animated Final</span>
+                </div>
+              </sc-if>
+              <sc-if value="{{batch.row1.rightNoSpine}}" hint-placeholder-val="{{true}}">
+                <div style="display:flex;flex-direction:column;">
+                  <div data-gallery-zoom="" style="aspect-ratio:1/1;overflow:hidden;border-radius:8px;position:relative;">
+                    <image-slot id="{{batch.row1.rightFinalId}}" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="New animated final, full body"></image-slot>
+                  </div>
+                  <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:10px;">Animated Final</span>
+                </div>
+              </sc-if>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section aria-label="More assets" style="max-width:1240px;margin:0 auto;padding:0 32px 22px;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:22px;">
+          <div style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:28px;">
+            <div style="display:grid;grid-template-columns:1fr 1.55fr;gap:18px;align-items:stretch;">
+              <div style="display:flex;flex-direction:column;">
+                <div style="margin-bottom:22px;">
+                  <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1.05rem;margin:0;letter-spacing:.01em;">{{batch.row2.leftName}}</h2>
+                  <span style="display: block; font-family: Gabarito; font-size: .68rem; letter-spacing: .06em; color: #7a7a7a; text-transform: uppercase; margin-top: 6px">{{batch.row2.leftProject}}</span>
+                </div>
+                <div data-gallery-zoom="" style="aspect-ratio:1/1;overflow:hidden;border-radius:8px;position:relative;">
+                  <image-slot id="{{batch.row2.leftSketchId}}" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="New sketch, full body"></image-slot>
+                </div>
+                <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:10px;">Sketch</span>
+              </div>
+              <sc-if value="{{batch.row2.leftSpineKey}}" hint-placeholder-val="{{false}}">
+                <div style="display:flex;flex-direction:column;">
+                  <div style="flex:1;position:relative;width:100%;background:#141416;border-radius:8px;overflow:hidden;">
+                    <div class="spine-mount" data-spine-mount="{{batch.row2.leftSpineKey}}" style="position:absolute;inset:0;"></div>
+                    <div class="spine-anim-switcher" data-spine-switcher="{{batch.row2.leftSpineKey}}" style="position:absolute;inset:0;z-index:3;display:flex;align-items:center;justify-content:space-between;padding:0 10px;box-sizing:border-box;pointer-events:none;">
+                      <button type="button" class="spine-anim-prev" data-spine-prev="{{batch.row2.leftSpineKey}}" aria-label="Previous animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1L1 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                      </button>
+                      <span class="spine-anim-label" data-spine-label="{{batch.row2.leftSpineKey}}" style="display:none;"></span>
+                      <button type="button" class="spine-anim-next" data-spine-next="{{batch.row2.leftSpineKey}}" aria-label="Next animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L1 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                      </button>
+                    </div>
+                  </div>
+                  <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:10px;">Animated Final</span>
+                </div>
+              </sc-if>
+              <sc-if value="{{batch.row2.leftNoSpine}}" hint-placeholder-val="{{true}}">
+                <div style="display:flex;flex-direction:column;">
+                  <div data-gallery-zoom="" style="aspect-ratio:1/1;overflow:hidden;border-radius:8px;position:relative;">
+                    <image-slot id="{{batch.row2.leftFinalId}}" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="New animated final, full body"></image-slot>
+                  </div>
+                  <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:10px;">Animated Final</span>
+                </div>
+              </sc-if>
+            </div>
+          </div>
+          <div style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:28px;">
+            <div style="display:grid;grid-template-columns:1fr 1.55fr;gap:18px;align-items:stretch;">
+              <div style="display:flex;flex-direction:column;">
+                <div style="margin-bottom:22px;">
+                  <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1.05rem;margin:0;letter-spacing:.01em;">{{batch.row2.rightName}}</h2>
+                  <span style="display: block; font-family: Gabarito; font-size: .68rem; letter-spacing: .06em; color: #7a7a7a; text-transform: uppercase; margin-top: 6px">{{batch.row2.rightProject}}</span>
+                </div>
+                <div data-gallery-zoom="" style="aspect-ratio:1/1;overflow:hidden;border-radius:8px;position:relative;">
+                  <image-slot id="{{batch.row2.rightSketchId}}" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="New sketch, full body"></image-slot>
+                </div>
+                <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:10px;">Sketch</span>
+              </div>
+              <sc-if value="{{batch.row2.rightSpineKey}}" hint-placeholder-val="{{false}}">
+                <div style="display:flex;flex-direction:column;">
+                  <div style="flex:1;position:relative;width:100%;background:#141416;border-radius:8px;overflow:hidden;">
+                    <div class="spine-mount" data-spine-mount="{{batch.row2.rightSpineKey}}" style="position:absolute;inset:0;"></div>
+                    <div class="spine-anim-switcher" data-spine-switcher="{{batch.row2.rightSpineKey}}" style="position:absolute;inset:0;z-index:3;display:flex;align-items:center;justify-content:space-between;padding:0 10px;box-sizing:border-box;pointer-events:none;">
+                      <button type="button" class="spine-anim-prev" data-spine-prev="{{batch.row2.rightSpineKey}}" aria-label="Previous animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1L1 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                      </button>
+                      <span class="spine-anim-label" data-spine-label="{{batch.row2.rightSpineKey}}" style="display:none;"></span>
+                      <button type="button" class="spine-anim-next" data-spine-next="{{batch.row2.rightSpineKey}}" aria-label="Next animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L1 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                      </button>
+                    </div>
+                  </div>
+                  <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:10px;">Animated Final</span>
+                </div>
+              </sc-if>
+              <sc-if value="{{batch.row2.rightNoSpine}}" hint-placeholder-val="{{true}}">
+                <div style="display:flex;flex-direction:column;">
+                  <div data-gallery-zoom="" style="aspect-ratio:1/1;overflow:hidden;border-radius:8px;position:relative;">
+                    <image-slot id="{{batch.row2.rightFinalId}}" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="New animated final, full body"></image-slot>
+                  </div>
+                  <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:10px;">Animated Final</span>
+                </div>
+              </sc-if>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section aria-label="More assets — landscape" style="max-width:1240px;margin:0 auto;padding:0 32px 22px;">
+        <div data-gallery-zoom="" style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;overflow:hidden;position:relative;">
+          <div style="position:absolute;top:20px;left:20px;z-index:2;background:rgba(10,10,11,0.82);backdrop-filter:blur(6px);border-radius:8px;padding:12px 18px;">
+            <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1rem;margin:0;letter-spacing:.01em;">{{batch.levelName}}</h2>
+            <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:.66rem;letter-spacing:.06em;color:#9b9b9b;text-transform:uppercase;margin-top:6px;">{{batch.levelProject}}</span>
+          </div>
+          <sc-if value="{{batch.levelVideo}}" hint-placeholder-val="{{false}}">
+            <video src="{{batch.levelVideo}}" style="display:block;width:100%;height:auto;aspect-ratio:1168/618;object-fit:cover;" autoPlay="{{true}}" muted="{{true}}" loop="{{true}}" playsInline="{{true}}" preload="auto" ref="{{playVideo}}"></video>
+          </sc-if>
+          <sc-if value="{{batch.levelNoVideo}}" hint-placeholder-val="{{true}}">
+            <image-slot id="{{batch.levelId}}" style="width:100%;height:auto;aspect-ratio:1168/618;" shape="rect" fit="cover" placeholder="New level background, full scene"></image-slot>
+          </sc-if>
+        </div>
+      </section>
+    </sc-for>
+
+    <section aria-label="Load more" style="max-width:1240px;margin:0 auto;padding:0 32px 64px;display:flex;justify-content:center;">
+      <button onClick="{{loadMore}}" style="font-family:'JetBrains Mono',monospace;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#f2f2f0;background:transparent;border:1px solid rgba(255,255,255,0.18);padding:14px 32px;border-radius:6px;cursor:pointer;transition:border-color .15s,background .15s;" style-hover="border-color:#eb6c2b;background:rgba(235,108,43,0.08);">Load More</button>
+    </section>
+  </main>
+
+  <footer style="padding:72px 0 40px;">
+    <div style="max-width:1240px;margin:0 auto;padding:0 32px;">
+      <div style="display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;margin-bottom:56px;">
+        <div style="max-width:320px;">
+          <div style="display:flex;align-items:center;gap:8px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.05rem;letter-spacing:-0.01em;margin-bottom:14px;"><img src="exyz-logo.png" alt="" style="width:24px;height:24px;display:block;" />EXYZ.STUDIO</div>
+          <p style="font-size:.9rem;color:#8a8a8a;font-family:'JetBrains Mono',monospace;line-height:1.6;">Premium game art production for studios worldwide. Characters, environments, weapons, and beyond.</p>
+        </div>
+        <div>
+          <h4 style="font-family:'JetBrains Mono',monospace;letter-spacing:0.04em;text-transform:uppercase;font-size:.78rem;color:#8a8a8a;margin-bottom:16px;">Services</h4>
+          <a href="asset-production.dc.html" class="exyz-foot-link" style="display:block;color:#c7c7c7;font-size:.88rem;padding:5px 0;text-decoration:none;">Asset Production</a>
+          <a href="video-creatives.dc.html" class="exyz-foot-link" style="display:block;color:#c7c7c7;font-size:.88rem;padding:5px 0;text-decoration:none;">Video Creatives</a>
+        </div>
+        <div>
+          <h4 style="font-family:'JetBrains Mono',monospace;letter-spacing:0.04em;text-transform:uppercase;font-size:.78rem;color:#8a8a8a;margin-bottom:16px;">Company</h4>
+          <a href="our-work.dc.html" class="exyz-foot-link" style="display:block;color:#c7c7c7;font-size:.88rem;padding:5px 0;text-decoration:none;">Our Work</a>
+          <a href="contact.dc.html" class="exyz-foot-link" style="display:block;color:#c7c7c7;font-size:.88rem;padding:5px 0;text-decoration:none;">Contact</a>
+        </div>
+        <div>
+          <h4 style="font-family:'JetBrains Mono',monospace;letter-spacing:0.04em;text-transform:uppercase;font-size:.78rem;color:#8a8a8a;margin-bottom:16px;">Social</h4>
+          <a href="https://www.instagram.com/exyz.studio/" class="exyz-foot-link" style="display:block;color:#c7c7c7;font-size:.88rem;padding:5px 0;text-decoration:none;">Instagram</a>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:space-between;border-top:1px solid rgba(255,255,255,0.08);padding-top:24px;color:#6f6f6f;font-size:.8rem;flex-wrap:wrap;gap:10px;font-family:'JetBrains Mono',monospace;">
+        <span>© 2026 EXYZ.Studio. All rights reserved.</span>
+        <span>Riga, Latvia · Working async, worldwide</span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  tags = ['Concept Art', 'Character Design', 'Levels', '2D Spine Animations'];
+
+  state = { extraCount: 0 };
+
+  shibaSkinDefs = [
+    { name: 'Default Skin', ph: 'Shiba default skin, full body' },
+    { name: 'Sheep Skin', ph: 'Shiba sheep skin, full body' },
+    { name: 'Raincoat Skin', ph: 'Shiba raincoat skin, full body' },
+    { name: 'Cowboy Skin', ph: 'Shiba cowboy skin, full body' },
+    { name: 'Dark Mage Skin', ph: 'Shiba dark mage skin, full body' },
+    { name: 'Dragon Skin', ph: 'Shiba dragon skin, full body' }
+  ];
+
+  makeRow(groupIdx, rowIdx) {
+    const leftIdx = groupIdx * 4 + rowIdx * 2 + 1;
+    const rightIdx = leftIdx + 1;
+    const leftSpineKey = leftIdx === 1 ? 'prince' : (leftIdx === 3 ? 'mushroomeye' : (leftIdx === 5 ? 'maskedmage' : (leftIdx === 7 ? 'armadillo' : null)));
+    const rightSpineKey = rightIdx === 4 ? 'turtlecrab' : (rightIdx === 2 ? 'librarian' : (rightIdx === 6 ? 'nagasword' : (rightIdx === 8 ? 'wraith' : null)));
+    return {
+      leftName: 'Character: ' + (leftSpineKey === 'prince' ? 'Prince' : leftSpineKey === 'mushroomeye' ? 'Mushroom Eye' : leftSpineKey === 'maskedmage' ? 'Masked Mage' : leftSpineKey === 'armadillo' ? 'Armadillo' : 'New Asset ' + leftIdx),
+      leftProject: 'Project: Shiba Story Go!',
+      leftSketchId: 'extra-' + leftIdx + '-sketch',
+      leftFinalId: 'extra-' + leftIdx + '-final',
+      leftSpineKey: leftSpineKey,
+      leftNoSpine: !leftSpineKey,
+      rightName: 'Character: ' + (rightSpineKey === 'librarian' ? 'NPC Librarian' : rightSpineKey === 'turtlecrab' ? 'Turtle Crab' : rightSpineKey === 'nagasword' ? 'Naga Sword' : rightSpineKey === 'wraith' ? 'Wraith' : 'New Asset ' + rightIdx),
+      rightProject: 'Project: Shiba Story Go!',
+      rightSketchId: 'extra-' + rightIdx + '-sketch',
+      rightFinalId: 'extra-' + rightIdx + '-final',
+      rightSpineKey: rightSpineKey,
+      rightNoSpine: !rightSpineKey
+    };
+  }
+
+  makeExtraBatch(i) {
+    const LEVEL_VIDEOS = {
+      0: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/2d-assets/Skull_island_Location.mp4',
+      1: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/2d-assets/DarkForest_Location.mp4'
+    };
+    const levelVideo = LEVEL_VIDEOS[i] || null;
+    return {
+      row1: this.makeRow(i, 0),
+      row2: this.makeRow(i, 1),
+      levelName: 'Level: New Level ' + (i + 1),
+      levelProject: 'Project: Shiba Story Go!',
+      levelId: 'extra-level-' + (i + 1),
+      levelVideo: levelVideo,
+      levelNoVideo: !levelVideo
+    };
+  }
+
+  renderVals() {
+    const shibaSkins = this.shibaSkinDefs.map(s => ({
+      id: 'shiba-' + s.name.toLowerCase().replace(/\s+skin$/, '').replace(/\s+/g, '-'),
+      name: s.name,
+      ph: s.ph
+    }));
+    const extraBatches = [];
+    for (let i = 0; i < this.state.extraCount; i++) extraBatches.push(this.makeExtraBatch(i));
+    return {
+      tags: this.tags,
+      shibaSkins,
+      extraBatches,
+      loadMore: () => this.setState(s => ({ extraCount: s.extraCount + 1 })),
+      playVideo: (el) => { if (el) { const p = el.play(); if (p && p.catch) p.catch(() => {}); } }
+    };
+  }
+
+  componentDidMount() {
+    this._spineInited = this._spineInited || new Set();
+    this._initSpinePlayers();
+    this._spineMountObserver = setInterval(() => this._initSpinePlayers(), 400);
+  }
+
+  componentWillUnmount() {
+    if (this._spineMountObserver) clearInterval(this._spineMountObserver);
+  }
+
+  componentDidUpdate() {
+    this._initSpinePlayers();
+  }
+
+  _initSpinePlayers() {
+    if (typeof spine === 'undefined' || !spine.SpinePlayer) return;
+    this._spineInited = this._spineInited || new Set();
+    const mounts = document.querySelectorAll('[data-spine-mount]');
+    mounts.forEach(mountEl => {
+      const key = mountEl.getAttribute('data-spine-mount');
+      if (this._spineInited.has(key)) return;
+      this._spineInited.add(key);
+      const switcherEl = document.querySelector('[data-spine-switcher="' + key + '"]');
+      const labelEl = document.querySelector('[data-spine-label="' + key + '"]');
+      const prevBtn = document.querySelector('[data-spine-prev="' + key + '"]');
+      const nextBtn = document.querySelector('[data-spine-next="' + key + '"]');
+      const showFallback = (msg) => {
+        mountEl.style.display = 'flex';
+        mountEl.style.alignItems = 'center';
+        mountEl.style.justifyContent = 'center';
+        mountEl.style.boxSizing = 'border-box';
+        mountEl.style.padding = '20px';
+        mountEl.innerHTML = '<span style="display:block;max-width:100%;white-space:normal;word-break:break-word;font-family:\'JetBrains Mono\',monospace;font-size:.7rem;color:#8a8a8a;text-align:center;line-height:1.6;">' + msg + '</span>';
+        if (switcherEl) switcherEl.style.display = 'none';
+      };
+      const timeoutId = setTimeout(() => {
+        if (!this._spineLoaded || !this._spineLoaded.has(key)) {
+          showFallback('Animation preview unavailable<br>(asset failed to load)');
+        }
+      }, 9000);
+      const SPINE_CONFIGS = {
+        main: {
+          skeleton: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/2d-assets/NPC_Blacksmith.json',
+          atlas: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/2d-assets/NPC_Blacksmith.atlas',
+          viewport: { x: -873, y: -288, width: 1642, height: 1566, padLeft: '0%', padRight: '0%', padTop: '0%', padBottom: '0%', debugRender: false }
+        },
+        turtlecrab: {
+          skeleton: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/2d-assets/Turtle%20Crab.json',
+          atlas: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/2d-assets/Turtle%20Crab.atlas',
+          viewport: { x: -833, y: -166, width: 1312, height: 1111, padLeft: '0%', padRight: '0%', padTop: '0%', padBottom: '0%', debugRender: false }
+        },
+        mushroomeye: {
+          skeleton: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/2d-assets/Mushroom%20eye.json',
+          atlas: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/2d-assets/Mushroom%20eye.atlas',
+          viewport: { x: -1690, y: -550, width: 3400, height: 3400, padLeft: '0%', padRight: '0%', padTop: '0%', padBottom: '0%', debugRender: false }
+        },
+        prince: {
+          skeleton: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/2d-assets/Prince.json',
+          atlas: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/2d-assets/Prince.atlas',
+          viewport: { x: -1700, y: -450, width: 3400, height: 3400, padLeft: '0%', padRight: '0%', padTop: '0%', padBottom: '0%', debugRender: false }
+        },
+        librarian: {
+          skeleton: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/2d-assets/NPC_Librarian.json',
+          atlas: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/2d-assets/NPC_Librarian.atlas',
+          viewport: { x: -1210, y: -240, width: 2400, height: 2400, padLeft: '0%', padRight: '0%', padTop: '0%', padBottom: '0%', debugRender: false }
+        },
+        trashbot: {
+          skeleton: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/2d-assets/TrashBot_WiP_fixed.json',
+          atlas: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/2d-assets/TrashBot_WiP.atlas',
+          viewport: { x: -824, y: -479, width: 1800, height: 1800, padLeft: '0%', padRight: '0%', padTop: '0%', padBottom: '0%', debugRender: false }
+        },
+        maskedmage: {
+          skeleton: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/2d-assets/monster_MaskedMage.json',
+          atlas: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/2d-assets/monster_MaskedMage.atlas',
+          viewport: { x: -2000, y: -950, width: 4000, height: 4000, padLeft: '0%', padRight: '0%', padTop: '0%', padBottom: '0%', debugRender: false }
+        },
+        nagasword: {
+          skeleton: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/2d-assets/monster_NagaSword.json',
+          atlas: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/2d-assets/monster_NagaSword.atlas',
+          viewport: { x: -1450, y: -680, width: 2900, height: 2900, padLeft: '0%', padRight: '0%', padTop: '0%', padBottom: '0%', debugRender: false }
+        },
+        wraith: {
+          skeleton: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/2d-assets/monster_Wraith.json',
+          atlas: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/2d-assets/monster_Wraith.atlas',
+          viewport: { x: -2000, y: -950, width: 4000, height: 4000, padLeft: '0%', padRight: '0%', padTop: '0%', padBottom: '0%', debugRender: false }
+        },
+        armadillo: {
+          skeleton: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/2d-assets/monster_Armadillo.json',
+          atlas: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/2d-assets/monster_Armadillo.atlas',
+          viewport: { x: -2000, y: -950, width: 4000, height: 4000, padLeft: '0%', padRight: '0%', padTop: '0%', padBottom: '0%', debugRender: false }
+        }
+      };
+      const cfg = SPINE_CONFIGS[key] || SPINE_CONFIGS.main;
+      try {
+        new spine.SpinePlayer(mountEl, {
+          skeleton: cfg.skeleton,
+          atlas: cfg.atlas,
+          animation: 'idle',
+          alpha: true,
+          backgroundColor: '#00000000',
+          premultipliedAlpha: true,
+          showControls: false,
+          viewport: cfg.viewport,
+          success: (player) => {
+            this._spineLoaded = this._spineLoaded || new Set();
+            this._spineLoaded.add(key);
+            clearTimeout(timeoutId);
+            if (!labelEl || !player.skeleton) return;
+            const names = player.skeleton.data.animations.map(a => a.name);
+            let idx = names.indexOf('idle');
+            if (idx < 0) idx = 0;
+            const apply = () => {
+              labelEl.textContent = names[idx];
+              player.setAnimation(names[idx], true);
+            };
+            apply();
+            if (prevBtn) prevBtn.onclick = () => { idx = (idx - 1 + names.length) % names.length; apply(); };
+            if (nextBtn) nextBtn.onclick = () => { idx = (idx + 1) % names.length; apply(); };
+          },
+          error: (player, msg) => {
+            clearTimeout(timeoutId);
+            showFallback('Animation preview unavailable<br>(' + (msg || 'load error') + ')');
+          }
+        });
+      } catch (e) {
+        clearTimeout(timeoutId);
+        showFallback('Animation preview unavailable');
+      }
+    });
+  }
+}
+
+</script>
+</body>
+</html>
