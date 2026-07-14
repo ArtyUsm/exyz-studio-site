@@ -957,6 +957,7 @@
           this._img.src = url;
           this._ghost.src = url;
         }
+        this._img.alt = this.getAttribute('placeholder') || '';
         this._img.style.display = 'block';
         this._empty.style.display = 'none';
         this.setAttribute('data-filled', '');

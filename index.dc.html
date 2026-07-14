@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,6 +12,7 @@
 <meta name="description" content="EXYZ.Studio designs 2D/3D game assets — characters, UI, environments — and turns them into video creatives, playable ads, and trailers for mobile game studios.">
 <link rel="canonical" href="https://www.exyz.studio/">
 <meta name="robots" content="index, follow">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob: https:; media-src 'self' https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev; connect-src 'self' https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev; frame-ancestors 'none'; base-uri 'self'; object-src 'none';">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="EXYZ.Studio">
 <meta property="og:title" content="EXYZ.Studio — Game Asset Production &amp; Video Creatives for Mobile Games">
@@ -37,6 +38,7 @@
 .exyz-foot-link:hover{ color:#e8e8e8 !important; }
 .exyz-viewmore:hover{ border-color:rgba(255,255,255,0.4) !important; color:#f2f2f0 !important; }
 image-slot{ display:block; }
+image-slot::part(frame){ background:transparent !important; color:#9b9b9b !important; }
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "EXYZ.Studio", "url": "https://www.exyz.studio/", "logo": "https://www.exyz.studio/logo.png", "description": "EXYZ.Studio designs 2D/3D game assets and produces video creatives, playable ads, and trailers for mobile game studios.", "areaServed": "Worldwide", "knowsAbout": ["Game asset production", "2D game art", "3D game art", "Video creatives for mobile games", "Playable ads", "UGC ads", "3D animation", "Motion graphics"], "sameAs": ["https://www.instagram.com/exyz.studio/"]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do you only work on game assets, or only on video creatives?", "acceptedAnswer": {"@type": "Answer", "text": "Both, by design. Most clients start with one and move to the other once they see the same team keeps the visual style consistent — assets built for the game become the raw material for the ads that market it."}}, {"@type": "Question", "name": "What file formats and engines do you deliver into?", "acceptedAnswer": {"@type": "Answer", "text": "2D and 3D source files (.psd, .aep, .blend, .ma/.mb) plus engine-ready exports for Unity, Unreal, and Spine. If you already have a pipeline or brand guidelines, we adapt to it rather than asking you to adapt to us."}}, {"@type": "Question", "name": "How fast can you turn around a video creative?", "acceptedAnswer": {"@type": "Answer", "text": "Performance-focused cuts typically ship in days once source assets are ready; full cinematic trailers take longer depending on scene complexity. We scope timelines per project rather than quoting one number for everything."}}, {"@type": "Question", "name": "Can you start before our game has any assets at all?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — we regularly join projects at the concept stage, when a game exists only as a design doc, and build the first characters, UI, and environment art from there."}}, {"@type": "Question", "name": "What genres do you have the most experience in?", "acceptedAnswer": {"@type": "Answer", "text": "Strategy, battlers, puzzle, RPG, slots, and casual titles make up most of our project history, though the same 2D/3D and motion skills apply to adjacent categories like entertainment apps."}}, {"@type": "Question", "name": "Do you offer ongoing support or only one-off projects?", "acceptedAnswer": {"@type": "Answer", "text": "Both. Some clients bring a single campaign; most stay on a monthly retainer so the same team keeps producing assets and creatives as the game evolves."}}]}</script>
@@ -54,7 +56,6 @@ image-slot{ display:block; }
       <nav class="exyz-nav" aria-label="Primary" style="display:flex;gap:36px;align-items:center;">
         <a href="asset-production.dc.html" style="font-family:'JetBrains Mono',monospace;font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:#9b9b9b;text-decoration:none;transition:color .15s;">Asset Production</a>
         <a href="video-creatives.dc.html" style="font-family:'JetBrains Mono',monospace;font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:#9b9b9b;text-decoration:none;transition:color .15s;">Video Creatives</a>
-        <a href="our-work.dc.html" style="font-family:'JetBrains Mono',monospace;font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:#9b9b9b;text-decoration:none;transition:color .15s;">Our Work</a>
         <a href="contact.dc.html" style="font-family:'JetBrains Mono',monospace;font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:#9b9b9b;text-decoration:none;transition:color .15s;">Contact</a>
         <a href="contact.dc.html" class="exyz-btn-a" style="font-family:'JetBrains Mono',monospace;font-size:.74rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#0a0a0b;background:#eb6c2b;padding:11px 20px;border-radius:5px;text-decoration:none;transition:background .15s;">Start a Project</a>
       </nav>
@@ -65,7 +66,8 @@ image-slot{ display:block; }
     <section aria-label="Hero" style="position:relative;max-width:1240px;margin:32px auto 0;padding:0 32px;">
       <div style="position:relative;overflow:hidden;border-radius:10px;height:min(66vw,680px);min-height:420px;">
         <div style="position:absolute;inset:0;overflow:hidden;pointer-events:none;">
-          <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/CreativeProductionReel1106.mp4" autoplay="true" muted="true" loop="true" playsinline="true" disablepictureinpicture="true" controls="false" style="position:absolute;top:50%;left:50%;width:100%;height:100%;object-fit:cover;transform:translate(-50%,-50%);pointer-events:none;"></video>
+          <image-slot id="hero-video-poster" style="position:absolute;inset:0;width:100%;height:100%;" shape="rect" fit="cover" placeholder="Hero reel poster frame"></image-slot>
+          <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/CreativeProductionReel1106.mp4" autoplay="true" muted="true" loop="true" playsinline="true" disablepictureinpicture="true" controls="false" ref="{{primeVideo}}" style="position:absolute;top:50%;left:50%;width:100%;height:100%;object-fit:cover;transform:translate(-50%,-50%);pointer-events:none;opacity:1;"></video>
         <div style="position: absolute; left: -2px; top: 210px; background: linear-gradient(90deg, rgba(10,10,11,0.88) 0%, rgba(10,10,11,0.6) 42%, rgba(10,10,11,0.15) 64%, rgba(10,10,11,0) 80%); pointer-events: none; width: 1217px; height: 264px"><div style="position: absolute; left: -5px; top: -1px; width: 597px; padding: 0 48px; display: flex; flex-direction: column; justify-content: center; box-sizing: border-box; height: 272px">
           
           <h1 style="font-family:'Space Grotesk',sans-serif;font-weight:700;line-height:1.04;letter-spacing:-0.02em;margin:0;font-size:clamp(2.2rem,4.6vw,3.6rem);max-width:14ch;">Art that ships.<br>Creative that sells.</h1><p style="max-width:48ch;font-size:1.05rem;color:#b7b7b7;margin-top:18px;">Premium 3D &amp; 2D game assets and marketing creative, built for studios that won't settle.</p>
@@ -77,20 +79,20 @@ image-slot{ display:block; }
 
     <section aria-label="Clients" style="max-width:1240px;margin:20px auto 0;padding:0 32px;">
       <div style="background:#121214;border:1px solid rgba(255,255,255,0.08);border-radius:8px;display:flex;flex-wrap:wrap;align-items:stretch;">
-        <div style="flex:1;min-width:160px;padding:20px 16px;border-right:1px solid rgba(255,255,255,0.08);height:48px;box-sizing:content-box;">
-          <image-slot id="client-logo-1" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="Client logo"></image-slot>
+        <div style="flex:1;min-width:160px;padding:28px 16px;border-right:1px solid rgba(255,255,255,0.08);height:88px;box-sizing:content-box;">
+          <image-slot id="client-logo-1" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="eRepublik Labs logo"></image-slot>
         </div>
-        <div style="flex:1;min-width:160px;padding:20px 16px;border-right:1px solid rgba(255,255,255,0.08);height:48px;box-sizing:content-box;">
-          <image-slot id="client-logo-2" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="Client logo"></image-slot>
+        <div style="flex:1;min-width:160px;padding:28px 16px;border-right:1px solid rgba(255,255,255,0.08);height:88px;box-sizing:content-box;">
+          <image-slot id="client-logo-2" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="Gismart logo"></image-slot>
         </div>
-        <div style="flex:1;min-width:160px;padding:20px 16px;border-right:1px solid rgba(255,255,255,0.08);height:48px;box-sizing:content-box;">
-          <image-slot id="client-logo-3" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="Client logo"></image-slot>
+        <div style="flex:1;min-width:160px;padding:28px 16px;border-right:1px solid rgba(255,255,255,0.08);height:88px;box-sizing:content-box;">
+          <image-slot id="client-logo-3" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="Proof of Play logo"></image-slot>
         </div>
-        <div style="flex:1;min-width:160px;padding:20px 16px;border-right:1px solid rgba(255,255,255,0.08);height:48px;box-sizing:content-box;">
-          <image-slot id="client-logo-4" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="Client logo"></image-slot>
+        <div style="flex:1;min-width:160px;padding:28px 16px;border-right:1px solid rgba(255,255,255,0.08);height:88px;box-sizing:content-box;">
+          <image-slot id="client-logo-4" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="MADBOX logo"></image-slot>
         </div>
-        <div style="flex:1;min-width:160px;padding:20px 16px;height:48px;box-sizing:content-box;">
-          <image-slot id="client-logo-5" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="Client logo"></image-slot>
+        <div style="flex:1;min-width:160px;padding:28px 16px;height:88px;box-sizing:content-box;">
+          <image-slot id="client-logo-5" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="Cubic Games logo"></image-slot>
         </div>
       </div>
     </section>
@@ -130,7 +132,7 @@ image-slot{ display:block; }
         </sc-for>
       </div>
       <div style="display:flex;justify-content:center;margin-top:28px;">
-        <a href="asset-production.dc.html" class="exyz-viewmore" style="display:inline-block;padding:14px 26px;font-family:'JetBrains Mono',monospace;font-size:1.15rem;color:#c7c7c7;border:1px solid rgba(255,255,255,0.18);border-radius:8px;text-decoration:none;transition:border-color .15s,color .15s;">View more</a>
+        <a href="asset-production.dc.html" class="exyz-viewmore" style="display:inline-block;padding:16px 32px;font-family:'JetBrains Mono',monospace;font-size:0.95rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#f5f5f5;border:1px solid rgba(255,255,255,0.28);border-radius:10px;text-decoration:none;transition:border-color .15s,color .15s;">Load more</a>
       </div>
     </section>
 
@@ -148,8 +150,9 @@ image-slot{ display:block; }
                   <figure class="exyz-card" style="margin:0;background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:18px;overflow:hidden;transition:transform .18s,border-color .18s;">
                     <div style="position:relative;">
                       <sc-if value="{{item.hasVideo}}" hint-placeholder-val="{{false}}">
-                        <button aria-label="Open {{item.name}}" onClick="{{item.open}}" onMouseEnter="{{item.hoverPlay}}" onMouseLeave="{{item.hoverStop}}" style="all:unset;display:block;width:100%;aspect-ratio:16/10;cursor:pointer;position:relative;">
-                          <video src="{{item.srcUrl}}" preload="none" muted="true" loop="true" playsinline="true" style="width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;background:#0c0c0d;"></video>
+                        <button aria-label="Open {{item.name}}" onClick="{{item.open}}" onMouseEnter="{{item.hoverPlay}}" onMouseLeave="{{item.hoverStop}}" style="all:unset;display:block;width:100%;aspect-ratio:16/10;cursor:pointer;position:relative;overflow:hidden;">
+                          <image-slot id="{{item.posterId}}" style="position:absolute;inset:0;width:100%;height:100%;" shape="rect" fit="cover" placeholder="{{item.ph}}"></image-slot>
+                          <video src="{{item.srcUrl}}" preload="auto" muted="true" loop="true" playsinline="true" ref="{{primeVideo}}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;opacity:1;"></video>
                         </button>
                       </sc-if>
                       <sc-if value="{{item.noVideo}}" hint-placeholder-val="{{false}}">
@@ -172,7 +175,7 @@ image-slot{ display:block; }
         </sc-for>
       </div>
       <div style="display:flex;justify-content:center;margin-top:28px;">
-        <a href="video-creatives.dc.html" class="exyz-viewmore" style="display:inline-block;padding:14px 26px;font-family:'JetBrains Mono',monospace;font-size:1.15rem;color:#c7c7c7;border:1px solid rgba(255,255,255,0.18);border-radius:8px;text-decoration:none;transition:border-color .15s,color .15s;">View more</a>
+        <a href="video-creatives.dc.html" class="exyz-viewmore" style="display:inline-block;padding:16px 32px;font-family:'JetBrains Mono',monospace;font-size:0.95rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#f5f5f5;border:1px solid rgba(255,255,255,0.28);border-radius:10px;text-decoration:none;transition:border-color .15s,color .15s;">Load more</a>
       </div>
     </section>
 
@@ -255,7 +258,6 @@ image-slot{ display:block; }
         </div>
         <div>
           <h4 style="font-family:'JetBrains Mono',monospace;letter-spacing:0.04em;text-transform:uppercase;font-size:.78rem;color:#8a8a8a;margin-bottom:16px;">Company</h4>
-          <a href="our-work.dc.html" class="exyz-foot-link" style="display:block;color:#c7c7c7;font-size:.88rem;padding:5px 0;text-decoration:none;transition:color .15s;">Our Work</a>
           <a href="contact.dc.html" class="exyz-foot-link" style="display:block;color:#c7c7c7;font-size:.88rem;padding:5px 0;text-decoration:none;transition:color .15s;">Contact</a>
         </div>
         <div>
@@ -307,6 +309,22 @@ class Component extends DCLogic {
     if (v) { v.pause(); v.currentTime = 0; }
   };
 
+  primeVideo = (el) => {
+    if (!el || el._exyzPrimed) return;
+    el._exyzPrimed = true;
+    const seekToFrame = () => {
+      if (el.currentTime === 0) {
+        try { el.currentTime = 0.01; } catch (err) {}
+      }
+    };
+    el.addEventListener('loadedmetadata', seekToFrame, { once: true });
+    if (el.readyState >= 1) {
+      seekToFrame();
+    } else {
+      try { el.load(); } catch (err) {}
+    }
+  };
+
   openModal(url, name) {
     this.setState({ modalOpen: true, modalUrl: url, modalName: name });
   }
@@ -321,27 +339,27 @@ class Component extends DCLogic {
     { id: 'asset-4', project: 'Shiba Story Go!', name: 'NPC Ranger', ph: 'NPC Ranger character art, full body' },
     { id: 'asset-5', project: 'Shiba Story Go!', name: 'Boss Light Golem', ph: 'Boss Light Golem character art, full body' },
     { id: 'asset-6', project: 'Shiba Story Go!', name: 'Boss Dark Golem', ph: 'Boss Dark Golem character art, full body' },
-    { id: 'asset-7', project: 'Shiba Story Go!', name: 'NPC Alchemist', ph: 'NPC Alchemist character art, full body' },
-    { id: 'asset-8', project: 'Shiba Story Go!', name: 'NPC Blacksmith', ph: 'NPC Blacksmith character art, full body' },
-    { id: 'asset-9', project: 'Shiba Story Go!', name: 'NPC Scout', ph: 'NPC Scout character art, full body' },
-    { id: 'asset-10', project: 'Shiba Story Go!', name: 'Boss Storm Serpent', ph: 'Boss Storm Serpent character art, full body' },
-    { id: 'asset-11', project: 'Shiba Story Go!', name: 'Boss Frost Wraith', ph: 'Boss Frost Wraith character art, full body' },
-    { id: 'asset-12', project: 'Shiba Story Go!', name: 'Boss Iron Sentinel', ph: 'Boss Iron Sentinel character art, full body' }
+    { id: 'asset-7', project: 'Shiba Story Go!', name: 'Skarn the Blade Lizard', ph: 'NPC Alchemist character art, full body' },
+    { id: 'asset-8', project: 'Shiba Story Go!', name: 'Tide Wraith', ph: 'NPC Blacksmith character art, full body' },
+    { id: 'asset-9', project: 'Shiba Story Go!', name: 'Glasswing', ph: 'NPC Scout character art, full body' },
+    { id: 'asset-10', project: 'Shiba Story Go!', name: 'Ravenmurk', ph: 'Boss Storm Serpent character art, full body' },
+    { id: 'asset-11', project: 'Shiba Story Go!', name: 'Bramblecore', ph: 'Boss Frost Wraith character art, full body' },
+    { id: 'asset-12', project: 'Shiba Story Go!', name: 'Toadstool Widow', ph: 'Boss Iron Sentinel character art, full body' }
   ];
 
   videoItems = [
-    { id: 'video-1', name: 'Elder Realm Trailer', ph: 'Elder Realm Trailer thumbnail', hasVideo: true, noVideo: false, srcUrl: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/A_CM_107_v1_16x9_30s.mp4' },
-    { id: 'video-2', name: 'Galactic Fleet Ad', ph: 'Galactic Fleet Ad thumbnail', hasVideo: true, noVideo: false, srcUrl: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/BladeRunner_30_1920x1080.mp4' },
-    { id: 'video-3', name: 'Arcane Legends Intro', ph: 'Arcane Legends Intro thumbnail', hasVideo: true, noVideo: false, srcUrl: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/WarOfRights_03_16x9.mp4' },
-    { id: 'video-4', name: 'Crimson Dawn Reveal', ph: 'Crimson Dawn Reveal thumbnail', hasVideo: true, noVideo: false, srcUrl: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/MassiveOrdes_30_1920x1080.mp4' },
-    { id: 'video-5', name: 'Stellar Conquest Ad', ph: 'Stellar Conquest Ad thumbnail', hasVideo: true, noVideo: false, srcUrl: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/UnionBuilderAttack16x9.mp4' },
-    { id: 'video-6', name: 'Mystic Order Cinematic', ph: 'Mystic Order Cinematic thumbnail', hasVideo: true, noVideo: false, srcUrl: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/WagonTheftCinematic_Censored_16x9.mp4' },
-    { id: 'video-7', name: 'Void Marauders Teaser', ph: 'Void Marauders Teaser thumbnail', hasVideo: false, noVideo: true },
-    { id: 'video-8', name: 'Skyfall Uprising Ad', ph: 'Skyfall Uprising Ad thumbnail', hasVideo: false, noVideo: true },
-    { id: 'video-9', name: 'Ember Kingdom Cinematic', ph: 'Ember Kingdom Cinematic thumbnail', hasVideo: false, noVideo: true },
-    { id: 'video-10', name: 'Nightfall Syndicate Ad', ph: 'Nightfall Syndicate Ad thumbnail', hasVideo: false, noVideo: true },
-    { id: 'video-11', name: 'Frozen Throne Reveal', ph: 'Frozen Throne Reveal thumbnail', hasVideo: false, noVideo: true },
-    { id: 'video-12', name: 'Solar Empire Trailer', ph: 'Solar Empire Trailer thumbnail', hasVideo: false, noVideo: true }
+    { id: 'video-1', name: 'CM 107', ph: 'CM 107 thumbnail', hasVideo: true, noVideo: false, srcUrl: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/A_CM_107_v1_16x9_30s.mp4' },
+    { id: 'video-2', name: 'Blade Runner', ph: 'Blade Runner thumbnail', hasVideo: true, noVideo: false, srcUrl: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/BladeRunner_30_1920x1080.mp4' },
+    { id: 'video-3', name: 'War Of Rights', ph: 'War Of Rights thumbnail', hasVideo: true, noVideo: false, srcUrl: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/WarOfRights_03_16x9.mp4' },
+    { id: 'video-4', name: 'Massive Ordes', ph: 'Massive Ordes thumbnail', hasVideo: true, noVideo: false, srcUrl: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/MassiveOrdes_30_1920x1080.mp4' },
+    { id: 'video-5', name: 'Union Builder Attack', ph: 'Union Builder Attack thumbnail', hasVideo: true, noVideo: false, srcUrl: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/UnionBuilderAttack16x9.mp4' },
+    { id: 'video-6', name: 'Wagon Theft Cinematic', ph: 'Wagon Theft Cinematic thumbnail', hasVideo: true, noVideo: false, srcUrl: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/WagonTheftCinematic_Censored_16x9.mp4' },
+    { id: 'video-7', name: 'Attack City Builder', ph: 'Attack City Builder thumbnail', hasVideo: true, noVideo: false, srcUrl: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/video-creative-hub/AttackCityBuilder16x9.mp4' },
+    { id: 'video-8', name: 'Buffed Shiba', ph: 'Buffed Shiba thumbnail', hasVideo: true, noVideo: false, srcUrl: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/video-creative-hub/BuffedShiba_30_1920x1080.mp4' },
+    { id: 'video-9', name: 'Burning Village', ph: 'Burning Village thumbnail', hasVideo: true, noVideo: false, srcUrl: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/video-creative-hub/BurningVillage_30_1920x1080.mp4' },
+    { id: 'video-10', name: 'Castle Siege', ph: 'Castle Siege thumbnail', hasVideo: true, noVideo: false, srcUrl: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/video-creative-hub/CastleSiege_16x9.mp4' },
+    { id: 'video-11', name: 'Hero Wars Style', ph: 'Hero Wars Style thumbnail', hasVideo: true, noVideo: false, srcUrl: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/video-creative-hub/HeroWarsStyle_v1_1920x1080.mp4' },
+    { id: 'video-12', name: 'Rise Of Fistborn', ph: 'Rise Of Fistborn thumbnail', hasVideo: true, noVideo: false, srcUrl: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/video-creative-hub/RiseOfFistborn_16x9_Packshot.mp4' }
   ];
 
   chunk(arr, n) {
@@ -408,6 +426,7 @@ class Component extends DCLogic {
         ...item,
         hoverPlay: this.hoverPlayVideo,
         hoverStop: this.hoverStopVideo,
+        posterId: item.id + '-poster',
         open: () => this.openModal(item.srcUrl, item.name)
       };
     });

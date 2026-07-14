@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,6 +12,7 @@
 <meta name="description" content="EXYZ.Studio produces concept art, character design, levels, and 2D Spine animations for mobile games — production-ready assets that bring your vision to life.">
 <link rel="canonical" href="https://www.exyz.studio/asset-production">
 <meta name="robots" content="index, follow">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob: https:; media-src 'self' https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev; connect-src 'self' https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev; frame-ancestors 'none'; base-uri 'self'; object-src 'none';">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="EXYZ.Studio">
 <meta property="og:title" content="Game Asset Production — 2D Art &amp; Spine Animation for Mobile Games | EXYZ.Studio">
@@ -26,8 +27,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&amp;family=IBM+Plex+Sans:wght@400;500&amp;family=JetBrains+Mono:wght@400;500&amp;family=Gabarito:wght@700;800&amp;display=swap" rel="stylesheet">
 <script src="./image-slot.js"></script>
-<link rel="stylesheet" href="https://unpkg.com/@esotericsoftware/spine-player@4.2.*/dist/spine-player.css">
-<script src="https://unpkg.com/@esotericsoftware/spine-player@4.2.*/dist/iife/spine-player.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/@esotericsoftware/spine-player@4.2.109/dist/spine-player.css">
+<script src="https://unpkg.com/@esotericsoftware/spine-player@4.2.109/dist/iife/spine-player.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <style>
 .spine-mount .spine-player-controls{ display:none !important; }
 .spine-anim-prev:hover, .spine-anim-next:hover{ color:#eb6c2b !important; }
@@ -55,13 +56,11 @@ image-slot::part(frame){ background:#141416 !important; }
       <nav class="exyz-nav" aria-label="Primary" style="display:flex;gap:36px;align-items:center;">
         <a href="asset-production.dc.html" aria-current="page" style="font-family:'JetBrains Mono',monospace;font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:#f2f2f0;text-decoration:none;transition:color .15s;">Asset Production</a>
         <a href="video-creatives.dc.html" style="font-family:'JetBrains Mono',monospace;font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:#9b9b9b;text-decoration:none;transition:color .15s;">Video Creatives</a>
-        <a href="our-work.dc.html" style="font-family:'JetBrains Mono',monospace;font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:#9b9b9b;text-decoration:none;transition:color .15s;">Blog</a>
         <a href="contact.dc.html" style="font-family:'JetBrains Mono',monospace;font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:#9b9b9b;text-decoration:none;transition:color .15s;">Contact</a>
         <a href="contact.dc.html" class="exyz-btn-a" style="font-family:'JetBrains Mono',monospace;font-size:.74rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#0a0a0b;background:#eb6c2b;padding:11px 20px;border-radius:5px;text-decoration:none;transition:background .15s;">Start a Project</a>
       </nav>
     </div>
   </header>
-
   <main id="main">
     <section aria-label="Intro" style="max-width:1240px;margin:0 auto;padding:64px 32px 36px;">
       <h1 style="font-family:'Space Grotesk',sans-serif;font-weight:800;line-height:1;letter-spacing:-0.02em;margin:0;font-size:clamp(2.6rem,6vw,4.6rem);text-transform:uppercase;">Asset Production</h1>
@@ -369,7 +368,6 @@ image-slot::part(frame){ background:#141416 !important; }
         </div>
         <div>
           <h4 style="font-family:'JetBrains Mono',monospace;letter-spacing:0.04em;text-transform:uppercase;font-size:.78rem;color:#8a8a8a;margin-bottom:16px;">Company</h4>
-          <a href="our-work.dc.html" class="exyz-foot-link" style="display:block;color:#c7c7c7;font-size:.88rem;padding:5px 0;text-decoration:none;">Our Work</a>
           <a href="contact.dc.html" class="exyz-foot-link" style="display:block;color:#c7c7c7;font-size:.88rem;padding:5px 0;text-decoration:none;">Contact</a>
         </div>
         <div>
@@ -530,22 +528,22 @@ class Component extends DCLogic {
         maskedmage: {
           skeleton: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/2d-assets/monster_MaskedMage.json',
           atlas: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/2d-assets/monster_MaskedMage.atlas',
-          viewport: { x: -2000, y: -950, width: 4000, height: 4000, padLeft: '0%', padRight: '0%', padTop: '0%', padBottom: '0%', debugRender: false }
+          viewport: { x: -2000, y: -800, width: 4000, height: 4000, padLeft: '0%', padRight: '0%', padTop: '0%', padBottom: '0%', debugRender: false }
         },
         nagasword: {
           skeleton: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/2d-assets/monster_NagaSword.json',
           atlas: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/2d-assets/monster_NagaSword.atlas',
-          viewport: { x: -1450, y: -680, width: 2900, height: 2900, padLeft: '0%', padRight: '0%', padTop: '0%', padBottom: '0%', debugRender: false }
+          viewport: { x: -1450, y: -530, width: 2900, height: 2900, padLeft: '0%', padRight: '0%', padTop: '0%', padBottom: '0%', debugRender: false }
         },
         wraith: {
           skeleton: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/2d-assets/monster_Wraith.json',
           atlas: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/2d-assets/monster_Wraith.atlas',
-          viewport: { x: -2000, y: -950, width: 4000, height: 4000, padLeft: '0%', padRight: '0%', padTop: '0%', padBottom: '0%', debugRender: false }
+          viewport: { x: -2000, y: -800, width: 4000, height: 4000, padLeft: '0%', padRight: '0%', padTop: '0%', padBottom: '0%', debugRender: false }
         },
         armadillo: {
           skeleton: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/2d-assets/monster_Armadillo.json',
           atlas: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/2d-assets/monster_Armadillo.atlas',
-          viewport: { x: -2000, y: -950, width: 4000, height: 4000, padLeft: '0%', padRight: '0%', padTop: '0%', padBottom: '0%', debugRender: false }
+          viewport: { x: -2000, y: -800, width: 4000, height: 4000, padLeft: '0%', padRight: '0%', padTop: '0%', padBottom: '0%', debugRender: false }
         }
       };
       const cfg = SPINE_CONFIGS[key] || SPINE_CONFIGS.main;
@@ -564,7 +562,7 @@ class Component extends DCLogic {
             this._spineLoaded.add(key);
             clearTimeout(timeoutId);
             if (!labelEl || !player.skeleton) return;
-            const names = player.skeleton.data.animations.map(a => a.name);
+            const names = player.skeleton.data.animations.map(a => a.name).filter((n) => !(key === 'trashbot' && n === 'land'));
             let idx = names.indexOf('idle');
             if (idx < 0) idx = 0;
             const apply = () => {
