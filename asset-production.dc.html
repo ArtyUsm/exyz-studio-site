@@ -53,7 +53,7 @@ image-slot::part(frame){ background:#141416 !important; }
       <a href="index.dc.html" style="display:flex;align-items:center;gap:10px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.1rem;letter-spacing:-0.01em;color:#f2f2f0;text-decoration:none;">
         <img src="exyz-logo.png" alt="" style="width:30px;height:30px;display:block;" />EXYZ.STUDIO
       </a>
-      <nav class="exyz-nav" aria-label="Primary" style="display:flex;gap:36px;align-items:center;">
+      <nav class="exyz-nav" aria-label="Primary" style="display:flex;gap:20px 28px;align-items:center;flex-wrap:wrap;justify-content:flex-end;">
         <a href="asset-production.dc.html" aria-current="page" style="font-family:'JetBrains Mono',monospace;font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:#f2f2f0;text-decoration:none;transition:color .15s;">Asset Production</a>
         <a href="video-creatives.dc.html" style="font-family:'JetBrains Mono',monospace;font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:#9b9b9b;text-decoration:none;transition:color .15s;">Video Creatives</a>
         <a href="contact.dc.html" style="font-family:'JetBrains Mono',monospace;font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:#9b9b9b;text-decoration:none;transition:color .15s;">Contact</a>
@@ -80,7 +80,7 @@ image-slot::part(frame){ background:#141416 !important; }
           <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1.05rem;margin:0;letter-spacing:.01em;">Character: Shiba</h2>
           <span style="display: block; font-family: Gabarito; font-size: .68rem; letter-spacing: .06em; color: #7a7a7a; text-transform: uppercase; margin-top: 6px">Project: Shiba Story Go!</span>
         </div>
-        <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:20px;">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:20px;">
           <sc-for list="{{shibaSkins}}" as="skin" hint-placeholder-count="6">
             <div data-gallery-zoom="" style="overflow:hidden;border-radius:8px;">
               <image-slot id="{{skin.id}}" style="width:100%;height:auto;aspect-ratio:4/5;" shape="rect" fit="contain" placeholder="{{skin.ph}}"></image-slot>
@@ -92,7 +92,7 @@ image-slot::part(frame){ background:#141416 !important; }
     </section>
 
     <section aria-label="Character breakdowns" style="max-width:1240px;margin:0 auto;padding:0 32px 22px;">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:22px;">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;">
         <div style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:28px;">
 
           <div style="display:grid;grid-template-columns:1fr 1.55fr;gap:18px;align-items:stretch;">

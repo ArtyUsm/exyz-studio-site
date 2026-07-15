@@ -12,7 +12,7 @@
 <meta name="description" content="Get in touch with EXYZ.Studio about game asset production, video creatives, or playable ads for your mobile game.">
 <link rel="canonical" href="https://www.exyz.studio/contact">
 <meta name="robots" content="index, follow">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob: https:; media-src 'self' https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev; connect-src 'self' https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev https://api.web3forms.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none';">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob: https:; media-src 'self' https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev; connect-src 'self' https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev; frame-ancestors 'none'; base-uri 'self'; object-src 'none';">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="EXYZ.Studio">
 <meta property="og:title" content="Contact EXYZ.Studio — Game Art & Video Production Partner">
@@ -47,7 +47,7 @@
       <a href="index.dc.html" style="display:flex;align-items:center;gap:10px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.1rem;letter-spacing:-0.01em;color:#f2f2f0;text-decoration:none;">
         <img src="exyz-logo.png" alt="" style="width:30px;height:30px;display:block;" />EXYZ.STUDIO
       </a>
-      <nav class="exyz-nav" aria-label="Primary" style="display:flex;gap:36px;align-items:center;">
+      <nav class="exyz-nav" aria-label="Primary" style="display:flex;gap:20px 28px;align-items:center;flex-wrap:wrap;justify-content:flex-end;">
         <a href="asset-production.dc.html" style="font-family:'JetBrains Mono',monospace;font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:#9b9b9b;text-decoration:none;transition:color .15s;">Asset Production</a>
         <a href="video-creatives.dc.html" style="font-family:'JetBrains Mono',monospace;font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:#9b9b9b;text-decoration:none;transition:color .15s;">Video Creatives</a>
         <a href="contact.dc.html" aria-current="page" style="font-family:'JetBrains Mono',monospace;font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:#f2f2f0;text-decoration:none;transition:color .15s;">Contact</a>
@@ -64,11 +64,11 @@
 
     <section aria-labelledby="form-h" style="max-width:1240px;margin:0 auto;padding:36px 32px 96px;">
       <h2 id="form-h" style="position:absolute;left:-9999px;">Start a conversation</h2>
-      <div style="display:grid;grid-template-columns:1.6fr 1fr;gap:48px;align-items:start;">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:48px;align-items:start;">
         <form onSubmit="{{handleSubmit}}" style="display:flex;flex-direction:column;gap:20px;">
           <input type="hidden" name="access_key" value="24b969d2-4ec9-4cd9-bb02-1d4012014841">
           <input type="hidden" name="subject" value="New project inquiry — EXYZ.Studio">
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;">
             <label for="name" style="font-family:'JetBrains Mono',monospace;letter-spacing:0.06em;text-transform:uppercase;font-size:.72rem;color:#9b9b9b;">Name
               <input id="name" name="name" type="text" required placeholder="Your name" class="exyz-input" style="width:100%;margin-top:8px;padding:13px 14px;background:#141416;border:1px solid rgba(255,255,255,0.12);color:#f2f2f0;border-radius:6px;font-family:'IBM Plex Sans',sans-serif;font-size:.95rem;box-sizing:border-box;">
             </label>
@@ -76,7 +76,7 @@
               <input id="email" name="email" type="email" required placeholder="email@studio.com" class="exyz-input" style="width:100%;margin-top:8px;padding:13px 14px;background:#141416;border:1px solid rgba(255,255,255,0.12);color:#f2f2f0;border-radius:6px;font-family:'IBM Plex Sans',sans-serif;font-size:.95rem;box-sizing:border-box;">
             </label>
           </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;">
             <label for="company" style="font-family:'JetBrains Mono',monospace;letter-spacing:0.06em;text-transform:uppercase;font-size:.72rem;color:#9b9b9b;">Company / Studio
               <input id="company" name="company" type="text" placeholder="Studio name" class="exyz-input" style="width:100%;margin-top:8px;padding:13px 14px;background:#141416;border:1px solid rgba(255,255,255,0.12);color:#f2f2f0;border-radius:6px;font-family:'IBM Plex Sans',sans-serif;font-size:.95rem;box-sizing:border-box;">
             </label>
@@ -90,7 +90,7 @@
               </select>
             </label>
           </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;">
             <label for="budget" style="font-family:'JetBrains Mono',monospace;letter-spacing:0.06em;text-transform:uppercase;font-size:.72rem;color:#9b9b9b;">Budget Range
               <select id="budget" name="budget" class="exyz-input" style="width:100%;margin-top:8px;padding:13px 14px;background:#141416;border:1px solid rgba(255,255,255,0.12);color:#f2f2f0;border-radius:6px;font-family:'IBM Plex Sans',sans-serif;font-size:.95rem;box-sizing:border-box;">
                 <option value="" disabled selected>Select budget range</option>

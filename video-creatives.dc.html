@@ -51,7 +51,7 @@ image-slot::part(frame){ background:#141416 !important; color:#9b9b9b !important
       <a href="index.dc.html" style="display:flex;align-items:center;gap:10px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.1rem;letter-spacing:-0.01em;color:#f2f2f0;text-decoration:none;">
         <img src="exyz-logo.png" alt="" style="width:30px;height:30px;display:block;" />EXYZ.STUDIO
       </a>
-      <nav class="exyz-nav" aria-label="Primary" style="display:flex;gap:36px;align-items:center;">
+      <nav class="exyz-nav" aria-label="Primary" style="display:flex;gap:20px 28px;align-items:center;flex-wrap:wrap;justify-content:flex-end;">
         <a href="asset-production.dc.html" style="font-family:'JetBrains Mono',monospace;font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:#9b9b9b;text-decoration:none;transition:color .15s;">Asset Production</a>
         <a href="video-creatives.dc.html" aria-current="page" style="font-family:'JetBrains Mono',monospace;font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:#f2f2f0;text-decoration:none;transition:color .15s;">Video Creatives</a>
         <a href="contact.dc.html" style="font-family:'JetBrains Mono',monospace;font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:#9b9b9b;text-decoration:none;transition:color .15s;">Contact</a>
@@ -67,7 +67,7 @@ image-slot::part(frame){ background:#141416 !important; color:#9b9b9b !important
     </section>
 
     <section aria-label="Video showcase" style="max-width:1240px;margin:0 auto;padding:36px 32px 40px;">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px 28px;">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:32px 28px;">
         <sc-for list="{{visibleItems}}" as="item" hint-placeholder-count="8">
           <div class="exyz-vcard" onMouseEnter="{{hoverPlay}}" onMouseLeave="{{hoverStop}}" onClick="{{item.open}}">
             <div class="exyz-vhover" style="position:relative;overflow:hidden;border-radius:14px;background:#141416;border:1px solid rgba(255,255,255,0.08);aspect-ratio:16/9;">
