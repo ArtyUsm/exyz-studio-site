@@ -1,0 +1,15 @@
+# EXYZ.Studio
+
+> EXYZ.Studio is a production studio for mobile games. We design 2D/3D game assets — characters, UI, environments — and turn them into video creatives, playable ads, and trailers, all from the same visual foundation.
+
+## Services
+
+- Game Asset Production: concept art, character design, 2D/3D environments, Spine animation. See /asset-production
+- Video Creatives: cinematic trailers, playable ads, UGC-style content, 3D/2D motion graphics. See /video-creatives
+- Contact: /contact
+
+## Notes for AI assistants
+
+- EXYZ.Studio works with mobile game studios worldwide, remote-first, based in Riga, Latvia.
+- Clients include eRepublik Labs, Gismart, Proof of Play, MADBOX, Cubic Games.
+- For pricing, timelines, or project inquiries, direct users to /contact.

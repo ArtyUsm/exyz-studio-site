@@ -152,7 +152,7 @@ image-slot::part(frame){ background:transparent !important; color:#9b9b9b !impor
                       <sc-if value="{{item.hasVideo}}" hint-placeholder-val="{{false}}">
                         <button aria-label="Open {{item.name}}" onClick="{{item.open}}" onMouseEnter="{{item.hoverPlay}}" onMouseLeave="{{item.hoverStop}}" style="all:unset;display:block;width:100%;aspect-ratio:16/10;cursor:pointer;position:relative;overflow:hidden;">
                           <image-slot id="{{item.posterId}}" style="position:absolute;inset:0;width:100%;height:100%;" shape="rect" fit="cover" placeholder="{{item.ph}}"></image-slot>
-                          <video src="{{item.srcUrl}}" preload="auto" muted="true" loop="true" playsinline="true" ref="{{primeVideo}}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;opacity:1;"></video>
+                          <video src="{{item.srcUrl}}" preload="metadata" muted="true" loop="true" playsinline="true" ref="{{primeVideo}}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;opacity:1;"></video>
                         </button>
                       </sc-if>
                       <sc-if value="{{item.noVideo}}" hint-placeholder-val="{{false}}">
@@ -205,17 +205,25 @@ image-slot::part(frame){ background:transparent !important; color:#9b9b9b !impor
 
     <section aria-label="Testimonials" style="max-width:1240px;margin:0 auto;padding:64px 32px 40px;border-top:1px solid rgba(255,255,255,0.08);">
       <div style="font-family:'Space Grotesk',sans-serif;font-size:2.6rem;color:#eb6c2b;line-height:1;margin-bottom:8px;">“</div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;">
-        <div>
-          <p style="font-size:1.02rem;color:#c7c7c7;margin:0 0 20px;">We worked with EXYZ Studio for about a year on Shiba Story Go, and they were a genuine pleasure to collaborate with throughout. They played a key role in defining the game's art style, including many of the enemy designs, and also produced ad creative for our user acquisition campaigns. Across all of it, they delivered consistently high-quality work, hit tight deadlines reliably, and were always quick to respond to our communications. They took direction and feedback gracefully and turned revisions around fast without losing momentum. Beyond the craft, they were dependable communicators and real partners, the kind of studio you can hand an ambiguous brief and trust to come back with something better than you imagined. I'd happily work with them again and recommend them without hesitation to any team looking for a talented, reliable art partner.</p>
-          <span style="display:block;font-family:'JetBrains Mono',monospace;font-weight:600;font-size:.85rem;color:#eb6c2b;">WILLIAM SCHMITT</span>
-          <span style="font-family:'JetBrains Mono',monospace;font-size:.8rem;color:#8a8a8a;">Head of Studio at Proof of Play</span>
+      <div style="position:relative;">
+        <div style="overflow:hidden;" onPointerDown="{{onTestiDown}}" onPointerMove="{{onTestiMove}}" onPointerUp="{{onTestiUp}}" onPointerLeave="{{onTestiUp}}">
+          <div style="{{testiTrackStyle}}">
+            <sc-for list="{{testimonials}}" as="t" hint-placeholder-count="3">
+              <div style="flex:0 0 50%;min-width:50%;box-sizing:border-box;padding-right:48px;">
+                <p style="font-size:1.02rem;color:#c7c7c7;margin:0 0 20px;">{{t.quote}}</p>
+                <span style="display:block;font-family:'JetBrains Mono',monospace;font-weight:600;font-size:.85rem;color:#eb6c2b;">{{t.name}}</span>
+                <span style="font-family:'JetBrains Mono',monospace;font-size:.8rem;color:#8a8a8a;">{{t.role}}</span>
+              </div>
+            </sc-for>
+          </div>
         </div>
-        <div>
-          <p style="font-size:1.02rem;color:#c7c7c7;margin:0 0 20px;">EXYZ was our primary creative and art partner on Shiba Story Go!, developing everything from characters and environments to cinematics, trailers, and full ad campaigns. Throughout, they were the best kind of partner: one that makes you better than you were before. Repeatedly, Arty, and Alex and the team took half-baked ideas, rolled with last-minute pivots and always came back with results that exceeded our expectations. I would work with them again in a heartbeat, and recommend them without reservation.</p>
-          <span style="display:block;font-family:'JetBrains Mono',monospace;font-weight:600;font-size:.85rem;color:#eb6c2b;">AARON B. MURRAY</span>
-          <span style="font-family:'JetBrains Mono',monospace;font-size:.8rem;color:#8a8a8a;">Sr. Art Director, Proof of Play</span>
-        </div>
+        <button aria-label="Previous testimonial" onClick="{{prevTesti}}" style="position:absolute;top:50%;left:-22px;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:#141416;border:1px solid rgba(255,255,255,0.14);color:#f2f2f0;font-size:1.4rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;" style-hover="background:#1c1c1f;border-color:rgba(235,108,43,0.5);">‹</button>
+        <button aria-label="Next testimonial" onClick="{{nextTesti}}" style="position:absolute;top:50%;right:-22px;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:#141416;border:1px solid rgba(255,255,255,0.14);color:#f2f2f0;font-size:1.4rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;" style-hover="background:#1c1c1f;border-color:rgba(235,108,43,0.5);">›</button>
+      </div>
+      <div style="display:flex;gap:8px;margin-top:28px;">
+        <sc-for list="{{testiDots}}" as="dot" hint-placeholder-count="3">
+          <button aria-label="Go to testimonial" onClick="{{dot.go}}" style="width:8px;height:8px;border-radius:50%;background:{{dot.color}};display:inline-block;border:none;padding:0;cursor:pointer;"></button>
+        </sc-for>
       </div>
     </section>
 
@@ -293,7 +301,39 @@ class Component extends DCLogic {
     assetDragging: false, videoDragging: false,
     assetStartX: 0, videoStartX: 0,
     playingVideos: {},
-    modalOpen: false, modalUrl: '', modalName: ''
+    modalOpen: false, modalUrl: '', modalName: '',
+    testiIdx: 0, testiDrag: 0, testiDragging: false, testiStartX: 0
+  };
+
+  testimonials = [
+    { quote: "We worked with EXYZ Studio for about a year on Shiba Story Go, and they were a genuine pleasure to collaborate with throughout. They played a key role in defining the game's art style, including many of the enemy designs, and also produced ad creative for our user acquisition campaigns. Across all of it, they delivered consistently high-quality work, hit tight deadlines reliably, and were always quick to respond to our communications. They took direction and feedback gracefully and turned revisions around fast without losing momentum. Beyond the craft, they were dependable communicators and real partners, the kind of studio you can hand an ambiguous brief and trust to come back with something better than you imagined. I'd happily work with them again and recommend them without hesitation to any team looking for a talented, reliable art partner.", name: 'WILLIAM SCHMITT', role: 'Head of Studio at Proof of Play' },
+    { quote: "EXYZ was our primary creative and art partner on Shiba Story Go!, developing everything from characters and environments to cinematics, trailers, and full ad campaigns. Throughout, they were the best kind of partner: one that makes you better than you were before. Repeatedly, Arty, and Alex and the team took half-baked ideas, rolled with last-minute pivots and always came back with results that exceeded our expectations. I would work with them again in a heartbeat, and recommend them without reservation.", name: 'AARON B. MURRAY', role: 'Sr. Art Director at Proof of Play' },
+    { quote: "I spent much of this year working with Artyoms and EXYZ as they provided the art production backbone for our project, Shiba Story Go. During this process they worked with us to develop the art style, ad creative, and established new production process to meet our breakneck needs. Artyoms was a big part of that, giving daily updates on the status of assets, communicating questions and issues quickly and clearly, and was an equal partner in figuring out how best to meet what the project demanded when negotiating the tricky balance between quality and speed. That level of communication with the studio was especially notable given the large time differences and members of our team spread across multiple time zones in North America. We rarely lost time because of this as Artyoms anticipated future needs effectively and helped us set them up for success. Given the opportunity, I greatly look forward to working with Artyoms and EXYZ again in the future.", name: 'COLIN MAGERLE', role: 'Associate Producer and Designer at Proof of Play' }
+  ];
+
+  goToTesti(i) {
+    const maxIdx = Math.max(0, this.testimonials.length - 2);
+    const idx = Math.min(Math.max(i, 0), maxIdx);
+    this.setState({ testiIdx: idx });
+  }
+  prevTesti = () => this.goToTesti(this.state.testiIdx - 1);
+  nextTesti = () => this.goToTesti(this.state.testiIdx + 1);
+
+  onTestiDown = (e) => {
+    const x = e.touches ? e.touches[0].clientX : e.clientX;
+    this.setState({ testiDragging: true, testiStartX: x, testiDrag: 0 });
+  };
+  onTestiMove = (e) => {
+    if (!this.state.testiDragging) return;
+    const x = e.touches ? e.touches[0].clientX : e.clientX;
+    this.setState({ testiDrag: x - this.state.testiStartX });
+  };
+  onTestiUp = () => {
+    if (!this.state.testiDragging) return;
+    const d = this.state.testiDrag;
+    this.setState({ testiDragging: false, testiDrag: 0 });
+    if (d < -60) this.goToTesti(this.state.testiIdx + 1);
+    else if (d > 60) this.goToTesti(this.state.testiIdx - 1);
   };
 
   playVideo(id) {
@@ -434,6 +474,22 @@ class Component extends DCLogic {
     return {
       assetPages,
       videoPages,
+      testimonials: this.testimonials,
+      testiDots: Array.from({ length: Math.max(1, this.testimonials.length - 1) }, (_, i) => ({
+        color: i === this.state.testiIdx ? '#eb6c2b' : '#3a3a3c',
+        go: () => this.goToTesti(i)
+      })),
+      testiTrackStyle: {
+        display: 'flex',
+        cursor: this.state.testiDragging ? 'grabbing' : 'grab',
+        transition: this.state.testiDragging ? 'none' : 'transform .45s cubic-bezier(.22,1,.36,1)',
+        transform: 'translateX(calc(' + (-this.state.testiIdx * 50) + '% + ' + this.state.testiDrag + 'px))'
+      },
+      prevTesti: this.prevTesti,
+      nextTesti: this.nextTesti,
+      onTestiDown: this.onTestiDown,
+      onTestiMove: this.onTestiMove,
+      onTestiUp: this.onTestiUp,
       modalOpen: this.state.modalOpen,
       modalUrl: this.state.modalUrl,
       modalName: this.state.modalName,

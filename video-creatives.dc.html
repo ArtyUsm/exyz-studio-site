@@ -61,42 +61,28 @@ image-slot::part(frame){ background:#141416 !important; color:#9b9b9b !important
   </header>
 
   <main id="main">
-    <section aria-label="Intro" style="max-width:1240px;margin:0 auto;padding:96px 32px 20px;position:relative;">
-      <span aria-hidden="true" style="position:absolute;top:16px;left:32px;font-family:'Space Grotesk',sans-serif;font-weight:800;font-size:clamp(4rem,10vw,7.5rem);letter-spacing:-0.03em;color:rgba(235,108,43,0.10);text-transform:uppercase;line-height:1;white-space:nowrap;pointer-events:none;">VIDEO</span>
-      <h1 style="position:relative;font-family:'JetBrains Mono',monospace;font-weight:700;letter-spacing:0.02em;margin:56px 0 0;font-size:clamp(1.6rem,3vw,2.3rem);text-transform:uppercase;">[VIDEO CREATIVES]</h1>
-      <p style="position:relative;max-width:56ch;font-size:1.05rem;color:#b7b7b7;margin:22px 0 0;">We build cinematic experiences that capture players and creative that converts. From AAA-grade trailers to high-performance UA ads.</p>
+    <section aria-label="Intro" style="max-width:1240px;margin:0 auto;padding:64px 32px 36px;">
+      <h1 style="font-family:'Space Grotesk',sans-serif;font-weight:800;line-height:1;letter-spacing:-0.02em;margin:0;font-size:clamp(2.6rem,6vw,4.6rem);text-transform:uppercase;">Video Creatives</h1>
+      <p style="max-width:56ch;font-size:1.05rem;color:#b7b7b7;margin:22px 0 0;">We build cinematic experiences that capture players and creative that converts. From AAA-grade trailers to high-performance UA ads.</p>
     </section>
 
     <section aria-label="Video showcase" style="max-width:1240px;margin:0 auto;padding:36px 32px 40px;">
-      <div style="position:relative;">
-        <div style="overflow:hidden;border-radius:18px;" onPointerDown="{{onVideoDown}}" onPointerMove="{{onVideoMove}}" onPointerUp="{{onVideoUp}}" onPointerLeave="{{onVideoUp}}">
-          <div style="{{videoTrackStyle}}">
-            <sc-for list="{{videoPages}}" as="page" hint-placeholder-count="4">
-              <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px 28px;flex:0 0 100%;min-width:100%;box-sizing:border-box;">
-                <sc-for list="{{page}}" as="item" hint-placeholder-count="2">
-                  <div class="exyz-vcard" onMouseEnter="{{hoverPlay}}" onMouseLeave="{{hoverStop}}" onClick="{{item.open}}">
-                    <div class="exyz-vhover" style="position:relative;overflow:hidden;border-radius:14px;background:#141416;border:1px solid rgba(255,255,255,0.08);aspect-ratio:16/9;">
-                      <image-slot id="{{item.id}}-poster" style="position:absolute;inset:0;width:100%;height:100%;" shape="rect" fit="cover" placeholder="{{item.title}} poster frame"></image-slot>
-                      <video src="{{item.srcUrl}}" preload="auto" muted="true" loop="true" playsinline="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;"></video>
-                    </div>
-                    <h3 style="margin:16px 0 0;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.05rem;text-transform:uppercase;letter-spacing:.01em;">{{item.title}}</h3>
-                  </div>
-                </sc-for>
-              </div>
-            </sc-for>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px 28px;">
+        <sc-for list="{{visibleItems}}" as="item" hint-placeholder-count="8">
+          <div class="exyz-vcard" onMouseEnter="{{hoverPlay}}" onMouseLeave="{{hoverStop}}" onClick="{{item.open}}">
+            <div class="exyz-vhover" style="position:relative;overflow:hidden;border-radius:14px;background:#141416;border:1px solid rgba(255,255,255,0.08);aspect-ratio:16/9;">
+              <image-slot id="{{item.id}}-poster" style="position:absolute;inset:0;width:100%;height:100%;" shape="rect" fit="cover" placeholder="{{item.title}} poster frame"></image-slot>
+              <video src="{{item.srcUrl}}" preload="metadata" muted="true" loop="true" playsinline="true" ref="{{primeVideo}}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;"></video>
+            </div>
+            <h3 style="margin:16px 0 0;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.05rem;text-transform:uppercase;letter-spacing:.01em;">{{item.title}}</h3>
           </div>
-        </div>
-        <button aria-label="Previous videos" onClick="{{prevVideo}}" style="position:absolute;top:50%;left:-22px;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:#141416;border:1px solid rgba(255,255,255,0.14);color:#f2f2f0;font-size:1.4rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;" style-hover="background:#1c1c1f;border-color:rgba(235,108,43,0.5);">‹</button>
-        <button aria-label="Next videos" onClick="{{nextVideo}}" style="position:absolute;top:50%;right:-22px;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:#141416;border:1px solid rgba(255,255,255,0.14);color:#f2f2f0;font-size:1.4rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;" style-hover="background:#1c1c1f;border-color:rgba(235,108,43,0.5);">›</button>
-      </div>
-      <div style="display:flex;gap:8px;justify-content:center;margin-top:28px;">
-        <sc-for list="{{videoDots}}" as="dot" hint-placeholder-count="4">
-          <button aria-label="Go to video page" onClick="{{dot.go}}" style="width:8px;height:8px;border-radius:50%;background:{{dot.color}};display:inline-block;border:none;padding:0;cursor:pointer;"></button>
         </sc-for>
       </div>
-      <div style="display:flex;justify-content:center;margin-top:28px;">
-        <button onClick="{{loadMore}}" class="exyz-viewmore" style="display:inline-block;padding:16px 32px;font-family:'JetBrains Mono',monospace;font-size:0.95rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#f5f5f5;background:transparent;border:1px solid rgba(255,255,255,0.28);border-radius:10px;cursor:pointer;transition:border-color .15s,color .15s;">Shuffle videos</button>
-      </div>
+      <sc-if value="{{hasMore}}" hint-placeholder-val="{{true}}">
+        <div style="display:flex;justify-content:center;margin-top:36px;">
+          <button onClick="{{loadMore}}" class="exyz-viewmore" style="display:inline-block;padding:16px 32px;font-family:'JetBrains Mono',monospace;font-size:0.95rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#f5f5f5;background:transparent;border:1px solid rgba(255,255,255,0.28);border-radius:10px;cursor:pointer;transition:border-color .15s,color .15s;">Load more</button>
+        </div>
+      </sc-if>
     </section>
 
     <section aria-labelledby="cta-h" style="max-width:1240px;margin:0 auto;padding:20px 32px 96px;">
@@ -148,7 +134,7 @@ image-slot::part(frame){ background:#141416 !important; color:#9b9b9b !important
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  state = { shuffled: null, videoIdx: 0, videoDrag: 0, videoDragging: false, videoStartX: 0, modalOpen: false, modalUrl: '', modalName: '' };
+  state = { shuffled: null, visibleCount: 8, modalOpen: false, modalUrl: '', modalName: '' };
 
   allItems = [
     { id: 'v-cm107', project: 'CM 107', title: 'Official Cinematic Trailer', srcUrl: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/A_CM_107_v1_16x9_30s.mp4' },
@@ -186,6 +172,19 @@ class Component extends DCLogic {
     this.setState({ shuffled: arr });
   }
 
+  primeVideo = (el) => {
+    if (!el || el._exyzPrimed) return;
+    el._exyzPrimed = true;
+    const seekToFrame = () => {
+      if (el.currentTime === 0) {
+        try { el.currentTime = 0.01; } catch (err) {}
+      }
+    };
+    el.addEventListener('loadedmetadata', seekToFrame, { once: true });
+    if (el.readyState >= 1) seekToFrame();
+    else try { el.load(); } catch (err) {}
+  };
+
   hoverPlay = (e) => {
     const v = e.currentTarget.querySelector('video');
     if (v) v.play().catch(() => {});
@@ -195,42 +194,8 @@ class Component extends DCLogic {
     if (v) { v.pause(); v.currentTime = 0; }
   };
 
-  chunk(arr, size) {
-    const out = [];
-    for (let i = 0; i < arr.length; i += size) out.push(arr.slice(i, i + size));
-    return out;
-  }
-
-  goToVideo(i) {
-    const list = this.state.shuffled || this.allItems;
-    const pages = this.chunk(list, 2).length;
-    const idx = ((i % pages) + pages) % pages;
-    this.setState({ videoIdx: idx });
-  }
-  prevVideo = () => this.goToVideo(this.state.videoIdx - 1);
-  nextVideo = () => this.goToVideo(this.state.videoIdx + 1);
-
-  onVideoDown = (e) => {
-    this.setState({ videoDragging: true, videoStartX: e.clientX, videoDrag: 0 });
-  };
-  onVideoMove = (e) => {
-    if (!this.state.videoDragging) return;
-    this.setState({ videoDrag: e.clientX - this.state.videoStartX });
-  };
-  onVideoUp = () => {
-    const d = this.state.videoDrag;
-    this.setState({ videoDragging: false, videoDrag: 0 });
-    if (d < -60) this.goToVideo(this.state.videoIdx + 1);
-    else if (d > 60) this.goToVideo(this.state.videoIdx - 1);
-  };
-
   loadMore = () => {
-    const arr = this.allItems.slice();
-    for (let i = arr.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [arr[i], arr[j]] = [arr[j], arr[i]];
-    }
-    this.setState({ shuffled: arr, videoIdx: 0 });
+    this.setState({ visibleCount: Math.min(this.state.visibleCount + 8, this.allItems.length) });
   };
 
   openModal = (url, name) => {
@@ -243,28 +208,14 @@ class Component extends DCLogic {
 
   renderVals() {
     const list = this.state.shuffled || this.allItems;
-    const decorated = list.map((item) => ({ ...item, open: () => this.openModal(item.srcUrl, item.title) }));
-    const videoPages = this.chunk(decorated, 2);
+    const visibleItems = list.slice(0, this.state.visibleCount).map((item) => ({ ...item, open: () => this.openModal(item.srcUrl, item.title) }));
     return {
-      videoPages,
+      visibleItems,
+      hasMore: this.state.visibleCount < list.length,
       hoverPlay: this.hoverPlay,
       hoverStop: this.hoverStop,
+      primeVideo: this.primeVideo,
       loadMore: this.loadMore,
-      prevVideo: this.prevVideo,
-      nextVideo: this.nextVideo,
-      onVideoDown: this.onVideoDown,
-      onVideoMove: this.onVideoMove,
-      onVideoUp: this.onVideoUp,
-      videoTrackStyle: {
-        display: 'flex',
-        cursor: this.state.videoDragging ? 'grabbing' : 'grab',
-        transition: this.state.videoDragging ? 'none' : 'transform .35s ease',
-        transform: 'translateX(calc(' + (-this.state.videoIdx * 100) + '% + ' + this.state.videoDrag + 'px))'
-      },
-      videoDots: videoPages.map((_, i) => ({
-        color: i === this.state.videoIdx ? '#eb6c2b' : '#3a3a3c',
-        go: () => this.goToVideo(i)
-      })),
       modalOpen: this.state.modalOpen,
       modalUrl: this.state.modalUrl,
       modalName: this.state.modalName,
