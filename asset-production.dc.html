@@ -34,7 +34,13 @@
 .spine-anim-prev:hover, .spine-anim-next:hover{ color:#eb6c2b !important; }
 @media (prefers-reduced-motion: reduce){ *{ animation:none !important; transition:none !important; } }
 @media (max-width:700px){
-  header .exyz-nav a.exyz-btn-a{ flex-basis:100% !important; order:99; text-align:center; margin-top:6px; }
+  header .exyz-nav{ gap:10px 14px !important; }
+  header .exyz-nav a:not(.exyz-btn-a){ font-size:.66rem !important; letter-spacing:.05em !important; white-space:nowrap; }
+  header .exyz-nav a.exyz-btn-a{ display:none !important; }
+  div:has(> div > div[data-gallery-zoom] > image-slot[placeholder*="sketch" i]){ grid-template-columns:1fr !important; }
+  div[data-gallery-zoom]:has(> image-slot[placeholder*="sketch" i]){ display:none !important; }
+  div[data-gallery-zoom]:has(> image-slot[placeholder*="sketch" i]) + span{ display:none !important; }
+  div:has(> .spine-mount){ aspect-ratio:1/1 !important; flex:none !important; }
 }
 .exyz-nav a:hover{ color:#f5f5f5 !important; }
 .exyz-btn-a:hover{ background:#ff7f3f !important; }
@@ -453,23 +459,17 @@ class Component extends DCLogic {
 
   makeRowNav(key) {
     const mobile = this.state.mobileRow;
-    const flip = this.state.rowFlip[key] || 0;
-    const drag = (this.state.rowDrag[key] && this.state.rowDrag[key].dragging) ? this.state.rowDrag[key].dx : 0;
     return {
-      showArrows: mobile,
-      cardWrapStyle: { flex: '0 0 ' + (mobile ? '100%' : 'calc(50% - 11px)'), minWidth: 0, boxSizing: 'border-box' },
-      trackStyle: {
-        display: 'flex',
-        gap: mobile ? '0px' : '22px',
-        cursor: drag ? 'grabbing' : (mobile ? 'grab' : 'default'),
-        transition: drag ? 'none' : 'transform .35s ease',
-        transform: mobile ? ('translateX(calc(' + (-flip * 100) + '% + ' + drag + 'px))') : 'translateX(0)'
-      },
+      showArrows: false,
+      cardWrapStyle: { flex: mobile ? '0 0 100%' : '0 0 calc(50% - 11px)', minWidth: 0, boxSizing: 'border-box' },
+      trackStyle: mobile
+        ? { display: 'flex', flexDirection: 'column', gap: '22px' }
+        : { display: 'flex', gap: '22px' },
       prev: this.prevRow(key),
       next: this.nextRow(key),
-      onDown: this.onRowDown(key),
-      onMove: this.onRowMove(key),
-      onUp: this.onRowUp(key)
+      onDown: () => {},
+      onMove: () => {},
+      onUp: () => {}
     };
   }
 

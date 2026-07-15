@@ -30,7 +30,9 @@
 <style>
 @media (prefers-reduced-motion: reduce){ *{ animation:none !important; transition:none !important; } }
 @media (max-width:700px){
-  header .exyz-nav a.exyz-btn-a{ flex-basis:100% !important; order:99; text-align:center; margin-top:6px; }
+  header .exyz-nav{ gap:10px 14px !important; }
+  header .exyz-nav a:not(.exyz-btn-a){ font-size:.66rem !important; letter-spacing:.05em !important; white-space:nowrap; }
+  header .exyz-nav a.exyz-btn-a{ display:none !important; }
   .exyz-clients-row{ flex-wrap:nowrap !important; overflow-x:auto !important; }
   .exyz-client-logo{ flex:1 0 68px !important; min-width:68px !important; height:30px !important; padding:10px 8px !important; }
   .exyz-hero-fade{ background:linear-gradient(90deg, rgba(10,10,11,0.94) 0%, rgba(10,10,11,0.78) 32%, rgba(10,10,11,0.3) 52%, rgba(10,10,11,0) 64%) !important; }
