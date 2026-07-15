@@ -29,6 +29,12 @@
 <script src="./image-slot.js"></script>
 <style>
 @media (prefers-reduced-motion: reduce){ *{ animation:none !important; transition:none !important; } }
+@media (max-width:700px){
+  header .exyz-nav a.exyz-btn-a{ flex-basis:100% !important; order:99; text-align:center; margin-top:6px; }
+  .exyz-clients-row{ flex-wrap:nowrap !important; overflow-x:auto !important; }
+  .exyz-client-logo{ flex:1 0 68px !important; min-width:68px !important; height:30px !important; padding:10px 8px !important; }
+  .exyz-hero-fade{ background:linear-gradient(90deg, rgba(10,10,11,0.94) 0%, rgba(10,10,11,0.78) 32%, rgba(10,10,11,0.3) 52%, rgba(10,10,11,0) 64%) !important; }
+}
 .exyz-faq[open] > summary .exyz-chev{ transform:rotate(45deg); }
 .exyz-faq summary::-webkit-details-marker{ display:none; }
 .exyz-nav a:hover{ color:#f5f5f5 !important; }
@@ -68,7 +74,7 @@ image-slot::part(frame){ background:transparent !important; color:#9b9b9b !impor
         <div style="position:absolute;inset:0;overflow:hidden;pointer-events:none;">
           <image-slot id="hero-video-poster" style="position:absolute;inset:0;width:100%;height:100%;" shape="rect" fit="cover" placeholder="Hero reel poster frame"></image-slot>
           <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/CreativeProductionReel1106.mp4" autoplay="true" muted="true" loop="true" playsinline="true" disablepictureinpicture="true" controls="false" ref="{{primeVideo}}" style="position:absolute;top:50%;left:50%;width:100%;height:100%;object-fit:cover;transform:translate(-50%,-50%);pointer-events:none;opacity:1;"></video>
-        <div style="position:absolute;left:0;top:0;right:0;bottom:0;background:linear-gradient(90deg, rgba(10,10,11,0.88) 0%, rgba(10,10,11,0.6) 42%, rgba(10,10,11,0.15) 64%, rgba(10,10,11,0) 80%);pointer-events:none;"><div style="position:absolute;inset:0;max-width:600px;padding:0 clamp(20px,6vw,48px);display:flex;flex-direction:column;justify-content:center;box-sizing:border-box;">
+        <div class="exyz-hero-fade" style="position:absolute;left:0;top:0;right:0;bottom:0;background:linear-gradient(90deg, rgba(10,10,11,0.88) 0%, rgba(10,10,11,0.6) 42%, rgba(10,10,11,0.15) 64%, rgba(10,10,11,0) 80%);pointer-events:none;"><div style="position:absolute;inset:0;max-width:600px;padding:0 clamp(20px,6vw,48px);display:flex;flex-direction:column;justify-content:center;box-sizing:border-box;">
           
           <h1 style="font-family:'Space Grotesk',sans-serif;font-weight:700;line-height:1.04;letter-spacing:-0.02em;margin:0;font-size:clamp(1.6rem,4.6vw,3.6rem);max-width:14ch;">Art that ships.<br>Creative that sells.</h1><p style="max-width:48ch;font-size:clamp(.85rem,2.2vw,1.05rem);color:#b7b7b7;margin-top:18px;">Premium 3D &amp; 2D game assets and marketing creative, built for studios that won't settle.</p>
         </div></div></div>
@@ -78,20 +84,20 @@ image-slot::part(frame){ background:transparent !important; color:#9b9b9b !impor
     </section>
 
     <section aria-label="Clients" style="max-width:1240px;margin:20px auto 0;padding:0 32px;">
-      <div style="background:#121214;border:1px solid rgba(255,255,255,0.08);border-radius:8px;display:flex;flex-wrap:wrap;align-items:stretch;">
-        <div style="flex:1;min-width:110px;padding:18px 14px;border-right:1px solid rgba(255,255,255,0.08);height:56px;box-sizing:content-box;">
+      <div class="exyz-clients-row" style="background:#121214;border:1px solid rgba(255,255,255,0.08);border-radius:8px;display:flex;flex-wrap:wrap;align-items:stretch;">
+        <div class="exyz-client-logo" style="flex:1;min-width:110px;padding:18px 14px;border-right:1px solid rgba(255,255,255,0.08);height:56px;box-sizing:content-box;">
           <image-slot id="client-logo-1" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="eRepublik Labs logo"></image-slot>
         </div>
-        <div style="flex:1;min-width:110px;padding:18px 14px;border-right:1px solid rgba(255,255,255,0.08);height:56px;box-sizing:content-box;">
+        <div class="exyz-client-logo" style="flex:1;min-width:110px;padding:18px 14px;border-right:1px solid rgba(255,255,255,0.08);height:56px;box-sizing:content-box;">
           <image-slot id="client-logo-2" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="Gismart logo"></image-slot>
         </div>
-        <div style="flex:1;min-width:110px;padding:18px 14px;border-right:1px solid rgba(255,255,255,0.08);height:56px;box-sizing:content-box;">
+        <div class="exyz-client-logo" style="flex:1;min-width:110px;padding:18px 14px;border-right:1px solid rgba(255,255,255,0.08);height:56px;box-sizing:content-box;">
           <image-slot id="client-logo-3" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="Proof of Play logo"></image-slot>
         </div>
-        <div style="flex:1;min-width:110px;padding:18px 14px;border-right:1px solid rgba(255,255,255,0.08);height:56px;box-sizing:content-box;">
+        <div class="exyz-client-logo" style="flex:1;min-width:110px;padding:18px 14px;border-right:1px solid rgba(255,255,255,0.08);height:56px;box-sizing:content-box;">
           <image-slot id="client-logo-4" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="MADBOX logo"></image-slot>
         </div>
-        <div style="flex:1;min-width:110px;padding:18px 14px;height:56px;box-sizing:content-box;">
+        <div class="exyz-client-logo" style="flex:1;min-width:110px;padding:18px 14px;height:56px;box-sizing:content-box;">
           <image-slot id="client-logo-5" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="Cubic Games logo"></image-slot>
         </div>
       </div>
