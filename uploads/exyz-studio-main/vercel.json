@@ -1,0 +1,42 @@
+{
+  "redirects": [
+    {
+      "source": "/index.dc.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/asset-production.dc.html",
+      "destination": "/asset-production",
+      "permanent": true
+    },
+    {
+      "source": "/video-creatives.dc.html",
+      "destination": "/video-creatives",
+      "permanent": true
+    },
+    {
+      "source": "/contact.dc.html",
+      "destination": "/contact",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/index.dc.html"
+    },
+    {
+      "source": "/asset-production",
+      "destination": "/asset-production.dc.html"
+    },
+    {
+      "source": "/video-creatives",
+      "destination": "/video-creatives.dc.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact.dc.html"
+    }
+  ]
+}

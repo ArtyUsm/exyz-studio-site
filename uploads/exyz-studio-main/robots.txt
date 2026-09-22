@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /play/
 
 User-agent: GPTBot
 Allow: /
