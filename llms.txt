@@ -1,6 +1,6 @@
 # EXYZ.Studio
 
-> EXYZ.Studio is a production studio for mobile games. We design 2D/3D game assets — characters, UI, environments — and turn them into video creatives, playable ads, and trailers, all from the same visual foundation.
+> EXYZ.Studio is a production studio for mobile games. We design 2D/3D game assets (characters, UI, environments) and turn them into video creatives, playable ads, and trailers, all from the same visual foundation.
 
 ## Services
 
@@ -16,7 +16,7 @@
 
 
 ## Offer (2026)
-- Fixed-price pilots: Hook Sprint (10 UA hooks, 3 working days, $1,900), Playable Pilot (1 custom HTML5 playable + 3 variants, 10 working days, $2,900), Style Match Test (1 character in your style, 5 working days, $750).
-- Retainers: Creative Retainer from $4,000/mo, Playable Line from $6,000/mo, Art Department from $5,000/mo. Cancel monthly.
+- Fixed-price pilots: Hook Sprint (10 UA hooks, 3 working days, $1,000), Playable Pilot (1 custom HTML5 playable + 3 variants, 1 working day, $450), Style Match Test (1 character in your style, 5 working days, $400).
+- Retainers: Creative Retainer from $4,000/mo, Playable Line from $3,000/mo, Art Department from $5,000/mo. Cancel monthly.
 - Guarantees: miss the style, you don't pay; miss a network spec, we fix it free; sources are yours from day one.
 - Pages: https://www.exyz.studio/pricing, /playables, /ai-policy, /case/shiba-story-go

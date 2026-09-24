@@ -8,15 +8,15 @@
 <body>
 <x-dc>
 <helmet>
-<title>Game Asset Production — 2D Art &amp; Spine Animation for Mobile Games | EXYZ.Studio</title>
-<meta name="description" content="EXYZ.Studio produces concept art, character design, levels, and 2D Spine animations for mobile games — production-ready assets that bring your vision to life.">
+<title>Game Asset Production · 2D Art &amp; Spine Animation for Mobile Games | EXYZ.Studio</title>
+<meta name="description" content="EXYZ.Studio produces concept art, character design, levels, and 2D Spine animations for mobile games: production-ready assets that bring your vision to life.">
 <link rel="canonical" href="https://www.exyz.studio/asset-production">
 <meta name="robots" content="index, follow">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com https://va.vercel-scripts.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob: https:; media-src 'self' https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev; connect-src 'self' https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev https://api.web3forms.com https://vitals.vercel-insights.com https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://www.google.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none';">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="EXYZ.Studio">
-<meta property="og:title" content="Game Asset Production — 2D Art &amp; Spine Animation for Mobile Games | EXYZ.Studio">
-<meta property="og:description" content="EXYZ.Studio produces concept art, character design, levels, and 2D Spine animations for mobile games — production-ready assets that bring your vision to life.">
+<meta property="og:title" content="Game Asset Production · 2D Art &amp; Spine Animation for Mobile Games | EXYZ.Studio">
+<meta property="og:description" content="EXYZ.Studio produces concept art, character design, levels, and 2D Spine animations for mobile games: production-ready assets that bring your vision to life.">
 <meta property="og:url" content="https://www.exyz.studio/asset-production">
 <meta property="og:image" content="https://www.exyz.studio/og-default.jpg">
 <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png">
@@ -24,8 +24,8 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Game Asset Production — 2D Art &amp; Spine Animation for Mobile Games | EXYZ.Studio">
-<meta name="twitter:description" content="EXYZ.Studio produces concept art, character design, levels, and 2D Spine animations for mobile games — production-ready assets that bring your vision to life.">
+<meta name="twitter:title" content="Game Asset Production · 2D Art &amp; Spine Animation for Mobile Games | EXYZ.Studio">
+<meta name="twitter:description" content="EXYZ.Studio produces concept art, character design, levels, and 2D Spine animations for mobile games: production-ready assets that bring your vision to life.">
 <meta name="twitter:image" content="https://www.exyz.studio/og-default.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true">
@@ -59,6 +59,7 @@ image-slot::part(frame){ background:#141416 !important; }
 .exyz-table td,.exyz-table th{ padding:14px 16px; border-bottom:1px solid rgba(255,255,255,0.08); text-align:left; vertical-align:top; }
 .exyz-table th{ font-family:'JetBrains Mono',monospace; font-size:.7rem; letter-spacing:.08em; text-transform:uppercase; color:#8a8a8a; font-weight:500; }
 @media (max-width:760px){ .exyz-table{ display:block; overflow-x:auto; } }
+@media (max-width:700px){ header .exyz-nav{ flex-wrap:nowrap !important; overflow-x:auto; width:100%; justify-content:flex-start !important; gap:4px 18px !important; scrollbar-width:none; } header .exyz-nav::-webkit-scrollbar{ display:none; } header .exyz-nav a:not(.exyz-btn-a){ font-size:.72rem !important; padding:11px 0 !important; white-space:nowrap; flex-shrink:0; } }
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "EXYZ.Studio", "url": "https://www.exyz.studio/", "logo": "https://www.exyz.studio/logo.png", "address": {"@type": "PostalAddress", "addressLocality": "Riga", "addressCountry": "LV"}, "description": "EXYZ.Studio designs 2D/3D game assets and produces video creatives, playable ads, and trailers for mobile game studios.", "areaServed": "Worldwide", "knowsAbout": ["Game asset production", "2D game art", "3D game art", "Video creatives for mobile games", "Playable ads", "UGC ads", "3D animation", "Motion graphics"], "sameAs": ["https://www.linkedin.com/company/exyz-studio/", "https://www.instagram.com/exyz.studio/"]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "serviceType": "Game Asset Production", "provider": {"@type": "Organization", "name": "EXYZ.Studio", "url": "https://www.exyz.studio/"}, "areaServed": "Worldwide", "description": "Concept art, character design, levels, and 2D Spine animations for mobile games."}</script>
@@ -74,6 +75,12 @@ image-slot::part(frame){ background:#141416 !important; }
 
   gtag('config', 'G-EL9JRFLK14');
 </script>
+<script>(function(){
+function label(){var d=new Date();if(d.getHours()>=18)d.setDate(d.getDate()+1);return d.toLocaleDateString('en-US',{month:'long',day:'numeric'});}
+function fill(){var v=label();document.querySelectorAll('[data-next-start]').forEach(function(el){if(el.textContent!==v)el.textContent=v;});}
+fill();new MutationObserver(fill).observe(document.documentElement,{childList:true,subtree:true});
+setInterval(fill,60000);
+})();</script>
 </helmet>
 
 <a href="#main" style="position:absolute;left:-999px;top:0;background:#eb6c2b;color:#0a0a0b;padding:10px 16px;z-index:100;font-family:'JetBrains Mono',monospace;font-size:.76rem;text-decoration:none;">Skip to content</a>
@@ -98,7 +105,7 @@ image-slot::part(frame){ background:#141416 !important; }
   <main id="main">
     <section aria-label="Intro" style="max-width:1240px;margin:0 auto;padding:64px 32px 36px;">
       <h1 style="font-family:'Space Grotesk',sans-serif;font-weight:800;line-height:1;letter-spacing:-0.02em;margin:0;font-size:clamp(2.6rem,6vw,4.6rem);text-transform:uppercase;">Asset Production</h1>
-      <p style="max-width:46ch;font-size:1.05rem;color:#b7b7b7;margin:22px 0 0;">From concept art and character design to detailed environments and fluid Spine animations — we create production-ready 2D game assets that bring your vision to life.</p>
+      <p style="max-width:46ch;font-size:1.05rem;color:#b7b7b7;margin:22px 0 0;">From concept art and character design to detailed environments and fluid Spine animations, we create production-ready 2D game assets that bring your vision to life.</p>
       <div style="display:flex;gap:28px;flex-wrap:wrap;margin-top:26px;">
         <span style="display:flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:#9b9b9b;"><span style="width:6px;height:6px;background:#eb6c2b;display:inline-block;"></span>Concept Art</span>
         <span style="display:flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:#9b9b9b;"><span style="width:6px;height:6px;background:#eb6c2b;display:inline-block;"></span>Character Design</span>
@@ -109,7 +116,7 @@ image-slot::part(frame){ background:#141416 !important; }
 
     <section aria-label="Style Match Test" style="max-width:1240px;margin:0 auto;padding:0 32px 24px;">
       <div style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;align-items:center;">
-        <div><span style="display:block;font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:#eb6c2b;margin-bottom:10px;">Entry product · 5 working days · $750</span><h2 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.6rem;margin:0 0 8px;">Style Match Test: one character in your style. Miss it, you don't pay.</h2><p style="margin:0;color:#9b9b9b;font-size:.95rem;">Sketch → final → basic Spine idle, plus a written read of your style guide. Your Art Director decides whether we hit. If we did, the fee counts toward your first batch. Weekly drops and daily updates from then on; Art Department retainers from $5,000/mo.</p></div>
+        <div><span style="display:block;font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:#eb6c2b;margin-bottom:10px;">Entry product · 5 working days · $400</span><h2 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.6rem;margin:0 0 8px;">Style Match Test: one character in your style. Miss it, you don't pay.</h2><p style="margin:0;color:#9b9b9b;font-size:.95rem;">Sketch → final → basic Spine idle, plus a written read of your style guide. Your Art Director decides whether we hit. If we did, the fee counts toward your first batch. Weekly drops and daily updates from then on; Art Department retainers from $5,000/mo.</p></div>
         <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end;"><a href="/contact?need=style-match" class="exyz-btn-a" style="display:inline-block;padding:15px 26px;font-family:'JetBrains Mono',monospace;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;border-radius:5px;background:#eb6c2b;color:#0a0a0b;font-weight:700;text-decoration:none;transition:background .15s;">Start a Style Match Test</a><a href="/ai-policy" class="exyz-viewmore" style="display:inline-block;padding:15px 26px;font-family:'JetBrains Mono',monospace;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;border-radius:5px;border:1px solid rgba(255,255,255,0.28);color:#f2f2f0;text-decoration:none;transition:border-color .15s,color .15s;">Our AI policy</a></div>
       </div>
     </section>
@@ -225,27 +232,27 @@ image-slot::part(frame){ background:#141416 !important; }
     </section>
 
     <section aria-label="More assets" style="max-width:1240px;margin:0 auto;padding:0 32px 22px;">
-      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:22px;">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:22px;">
         <div style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:28px;">
-          <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1.05rem;margin:0 0 16px;letter-spacing:.01em;">Character: General — Style 1</h2>
+          <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1.05rem;margin:0 0 16px;letter-spacing:.01em;">Character: General, Style 1</h2>
           <div data-gallery-zoom="" style="aspect-ratio:9/16;overflow:hidden;border-radius:8px;position:relative;">
             <image-slot id="inserted-1-general" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="Character: General, full body"></image-slot>
           </div>
         </div>
         <div style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:28px;">
-          <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1.05rem;margin:0 0 16px;letter-spacing:.01em;">Character: Soldier — Style 1</h2>
+          <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1.05rem;margin:0 0 16px;letter-spacing:.01em;">Character: Soldier, Style 1</h2>
           <div data-gallery-zoom="" style="aspect-ratio:9/16;overflow:hidden;border-radius:8px;position:relative;">
             <image-slot id="inserted-1-soldier" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="Character: Soldier, full body"></image-slot>
           </div>
         </div>
         <div style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:28px;">
-          <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1.05rem;margin:0 0 16px;letter-spacing:.01em;">Character: General — Style 2</h2>
+          <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1.05rem;margin:0 0 16px;letter-spacing:.01em;">Character: General, Style 2</h2>
           <div data-gallery-zoom="" style="aspect-ratio:9/16;overflow:hidden;border-radius:8px;position:relative;">
             <image-slot id="inserted-2-general" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="Character: General, full body"></image-slot>
           </div>
         </div>
         <div style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:28px;">
-          <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1.05rem;margin:0 0 16px;letter-spacing:.01em;">Character: Soldier — Style 2</h2>
+          <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1.05rem;margin:0 0 16px;letter-spacing:.01em;">Character: Soldier, Style 2</h2>
           <div data-gallery-zoom="" style="aspect-ratio:9/16;overflow:hidden;border-radius:8px;position:relative;">
             <image-slot id="inserted-2-soldier" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="Character: Soldier, full body"></image-slot>
           </div>
@@ -253,7 +260,7 @@ image-slot::part(frame){ background:#141416 !important; }
       </div>
     </section>
 
-    <section aria-label="More assets — landscape" style="max-width:1240px;margin:0 auto;padding:0 32px 22px;">
+    <section aria-label="More assets, landscape" style="max-width:1240px;margin:0 auto;padding:0 32px 22px;">
       <div data-gallery-zoom="" style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;overflow:hidden;position:relative;">
         <div style="position:absolute;top:20px;left:20px;z-index:2;background:rgba(10,10,11,0.82);backdrop-filter:blur(6px);border-radius:8px;padding:12px 18px;">
           <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1rem;margin:0;letter-spacing:.01em;">Military base</h2>
@@ -388,7 +395,7 @@ image-slot::part(frame){ background:#141416 !important; }
             </div>
           </div>
         </section>
-        <section aria-label="More assets — landscape" style="max-width:1240px;margin:0 auto;padding:0 32px 22px;">
+        <section aria-label="More assets, landscape" style="max-width:1240px;margin:0 auto;padding:0 32px 22px;">
           <div data-gallery-zoom="" style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;overflow:hidden;position:relative;">
             <div style="position:absolute;top:20px;left:20px;z-index:2;background:rgba(10,10,11,0.82);backdrop-filter:blur(6px);border-radius:8px;padding:12px 18px;">
               <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1rem;margin:0;letter-spacing:.01em;">Level: Skull Island</h2>
@@ -524,7 +531,7 @@ image-slot::part(frame){ background:#141416 !important; }
             </div>
           </div>
         </section>
-        <section aria-label="More assets — landscape" style="max-width:1240px;margin:0 auto;padding:0 32px 22px;">
+        <section aria-label="More assets, landscape" style="max-width:1240px;margin:0 auto;padding:0 32px 22px;">
           <div data-gallery-zoom="" style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;overflow:hidden;position:relative;">
             <div style="position:absolute;top:20px;left:20px;z-index:2;background:rgba(10,10,11,0.82);backdrop-filter:blur(6px);border-radius:8px;padding:12px 18px;">
               <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1rem;margin:0;letter-spacing:.01em;">Level: Dark Forest</h2>
@@ -660,7 +667,7 @@ image-slot::part(frame){ background:#141416 !important; }
             </div>
           </div>
         </section>
-        <section aria-label="More assets — landscape" style="max-width:1240px;margin:0 auto;padding:0 32px 22px;">
+        <section aria-label="More assets, landscape" style="max-width:1240px;margin:0 auto;padding:0 32px 22px;">
           <div data-gallery-zoom="" style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;overflow:hidden;position:relative;">
             <div style="position:absolute;top:20px;left:20px;z-index:2;background:rgba(10,10,11,0.82);backdrop-filter:blur(6px);border-radius:8px;padding:12px 18px;">
               <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1rem;margin:0;letter-spacing:.01em;">Level: Lava Land</h2>
@@ -796,7 +803,7 @@ image-slot::part(frame){ background:#141416 !important; }
             </div>
           </div>
         </section>
-        <section aria-label="More assets — landscape" style="max-width:1240px;margin:0 auto;padding:0 32px 22px;">
+        <section aria-label="More assets, landscape" style="max-width:1240px;margin:0 auto;padding:0 32px 22px;">
           <div data-gallery-zoom="" style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;overflow:hidden;position:relative;">
             <div style="position:absolute;top:20px;left:20px;z-index:2;background:rgba(10,10,11,0.82);backdrop-filter:blur(6px);border-radius:8px;padding:12px 18px;">
               <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1rem;margin:0;letter-spacing:.01em;">Level: Winter</h2>
@@ -878,7 +885,7 @@ image-slot::part(frame){ background:#141416 !important; }
         <h2 id="seo-ap-h" style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.4rem;margin:0 0 18px;">Game asset outsourcing without the style drift</h2>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px;color:#9b9b9b;font-size:.95rem;">
           <p style="margin:0;">EXYZ.Studio is a 2D game art studio producing concept art, character design, level backgrounds, and UI for mobile games. We work as an outsourced art department: from the first sketch to production-ready, engine-friendly files, keeping a single consistent art style across hundreds of assets.</p>
-          <p style="margin:0;">Our Spine animation team rigs and animates every character we design — idle, attack, hit, and custom sequences — delivered as Spine projects with atlases ready for Unity, Unreal, or your custom pipeline. The animated characters on this page are live Spine previews, not videos.</p>
+          <p style="margin:0;">Our Spine animation team rigs and animates every character we design (idle, attack, hit and custom sequences), delivered as Spine projects with atlases ready for Unity, Unreal, or your custom pipeline. The animated characters on this page are live Spine previews, not videos.</p>
           <p style="margin:0;">Studios choose us for full-cycle asset production on titles like Shiba Story Go!, where we shipped 60+ characters, bosses, and levels on a weekly cadence. If you need reliable game art outsourcing that scales with your roadmap, start a project and we'll scope the first batch together.</p>
         </div>
       </div>
@@ -886,7 +893,7 @@ image-slot::part(frame){ background:#141416 !important; }
 
     <div data-loadmore-wrap="">
     <section aria-label="Load more" style="max-width:1240px;margin:0 auto;padding:0 32px 64px;display:flex;justify-content:center;">
-      <button data-loadmore="" style="font-family:'JetBrains Mono',monospace;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#f2f2f0;background:transparent;border:1px solid rgba(255,255,255,0.18);padding:14px 32px;border-radius:6px;cursor:pointer;transition:border-color .15s,background .15s;" style-hover="border-color:#eb6c2b;background:rgba(235,108,43,0.08);">Load More</button>
+      <button class="exyz-viewmore" data-loadmore="" style="display:inline-block;padding:15px 26px;font-family:'JetBrains Mono',monospace;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;border-radius:5px;border:1px solid rgba(255,255,255,0.28);color:#f2f2f0;text-decoration:none;transition:border-color .15s,color .15s;background:transparent;cursor:pointer;" style-hover="border-color:#eb6c2b;background:rgba(235,108,43,0.08);">Load More</button>
     </section>
     </div>
 
@@ -895,10 +902,10 @@ image-slot::part(frame){ background:#141416 !important; }
         <h2 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(1.9rem,3.4vw,2.7rem);margin:0;">Want a weekly cadence like this on your game?</h2>
         <p style="max-width:56ch;margin:16px auto 0;color:#9b9b9b;font-family:'JetBrains Mono',monospace;font-size:.92rem;">Start with a Style Match Test. One character, five days, free if we miss.</p>
         <div style="display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:30px;">
-          <a href="/contact?need=style-match" class="exyz-btn-a" style="display:inline-block;padding:15px 26px;font-family:'JetBrains Mono',monospace;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;border-radius:5px;background:#eb6c2b;color:#0a0a0b;font-weight:700;text-decoration:none;transition:background .15s;">Start a Style Match Test: $750</a>
+          <a href="/contact?need=style-match" class="exyz-btn-a" style="display:inline-block;padding:15px 26px;font-family:'JetBrains Mono',monospace;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;border-radius:5px;background:#eb6c2b;color:#0a0a0b;font-weight:700;text-decoration:none;transition:background .15s;">Start a Style Match Test: $400</a>
           <a href="https://calendly.com/exyz-studio" class="exyz-viewmore" style="display:inline-block;padding:15px 26px;font-family:'JetBrains Mono',monospace;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;border-radius:5px;border:1px solid rgba(255,255,255,0.28);color:#f2f2f0;text-decoration:none;transition:border-color .15s,color .15s;">Book a 20-min scoping call</a>
         </div>
-        <p style="margin:18px 0 0;font-family:'JetBrains Mono',monospace;font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;color:#7a7a7a;">Next available start: <span style="color:#f2f2f0;">October 6</span></p>
+        <p style="margin:18px 0 0;font-family:'JetBrains Mono',monospace;font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;color:#7a7a7a;">Next available start: <span data-next-start="" style="color:#f2f2f0;">October 6</span></p>
         <div style="display:flex;justify-content:center;"><p style="margin:22px 0 0;font-family:'JetBrains Mono',monospace;font-size:.78rem;letter-spacing:.02em;color:#9b9b9b;line-height:1.7;max-width:70ch;text-align:center;"><span style="color:#f2f2f0;">Zero-risk start.</span> Pilots are fixed-price and fixed-date. Miss the style, you don't pay. Miss a network spec, we fix it free. Retainers cancel monthly. Sources are yours from day one.</p></div>
       </div>
     </section>

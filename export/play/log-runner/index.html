@@ -29,7 +29,7 @@ html,body{margin:0;padding:0;width:100%;height:100%;overflow:hidden;touch-action
 #mute svg{width:24px;height:24px;fill:#fff}
 #mute.off{opacity:.7}
 #tut{display:none;position:absolute;left:0;right:0;bottom:22%;text-align:center}
-#tutText{font-size:44px;animation:pulse 1s ease-in-out infinite alternate}
+#tutText{font-size:min(44px,11vw);text-align:center;max-width:94vw;animation:pulse 1s ease-in-out infinite alternate}
 @keyframes pulse{from{transform:scale(1)}to{transform:scale(1.08)}}
 #hand{width:110px;margin-top:8px;filter:drop-shadow(0 4px 4px rgba(0,0,0,.4))}
 #hand.swipe{animation:swipe 1.3s ease-in-out infinite alternate}
