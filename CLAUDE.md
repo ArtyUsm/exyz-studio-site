@@ -1,0 +1,1 @@
+- SEO tags (title, description, canonical, og/twitter, JSON-LD, CSP) live in the real <head> of each .dc.html, not in <helmet>. Never regenerate a page with dc_write without keeping them; edit via str_replace. Keep sitemap.xml lastmod and llms.txt in sync with site copy.

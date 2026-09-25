@@ -1,22 +1,40 @@
 # EXYZ.Studio
 
-> EXYZ.Studio is a production studio for mobile games. We design 2D/3D game assets (characters, UI, environments) and turn them into video creatives, playable ads, and trailers, all from the same visual foundation.
+> EXYZ.Studio is a game art and UA creative studio for mobile games. One team builds game-ready art (characters, environments, Spine animation) and the UA creatives that sell it (video hooks, trailers, HTML5 playable ads), all from the same source files. EU-based, remote-first, works with studios worldwide.
 
-## Services
+## Pages
 
-- Game Asset Production: concept art, character design, 2D/3D environments, Spine animation. See /asset-production
-- Video Creatives: cinematic trailers, playable ads, UGC-style content, 3D/2D motion graphics. See /video-creatives
-- Contact: /contact
+- [Home](https://www.exyz.studio/): overview, clients, entry pilots, FAQ
+- [Game Art](https://www.exyz.studio/asset-production): 2D concept art, character design, environments, Spine animation, weekly deliveries
+- [Video Creatives](https://www.exyz.studio/video-creatives): UA video hooks, AI-video / UGC-style and gameplay-based creatives, trailers
+- [Playables](https://www.exyz.studio/playables): custom HTML5 playable ads, interactive video, proven-mechanic playables, variant lines, live demos
+- [Pricing](https://www.exyz.studio/pricing): fixed-price pilots and monthly retainers
+- [Case study: Shiba Story Go!](https://www.exyz.studio/case/shiba-story-go): 60+ characters and bosses, 8+ levels, 500+ UA creatives for Proof of Play on a weekly cadence
+- [AI Policy](https://www.exyz.studio/ai-policy): how AI is and is not used, No-AI mode, per-asset log
+- [Contact](https://www.exyz.studio/contact): brief form and discovery call booking
 
-## Notes for AI assistants
+## Pilots (fixed price, fixed date)
 
-- EXYZ.Studio works with mobile game studios worldwide, remote-first, based in Riga, Latvia.
+- Hook Sprint: 10 UA video hooks in 3 working days, $1,000. Hooks that don't pass the client's internal review are replaced free.
+- Playable Pilot: 1 custom HTML5 playable + 3 variants, exported for Meta, Google, AppLovin, Unity, Mintegral, Moloco, under 5 MB. 2–3 working days (from 1 day for reskins), $450.
+- Style Match Test: 1 production-ready character in the client's style, 5 working days, $400. Up to 2 revision rounds on written feedback, then a full refund if the style is still missed.
+- Interactive Video: from $250.
+
+## Retainers (cancel monthly)
+
+- Creative Retainer: from $4,000/month, 10 to 80 UA creatives a month.
+- Playable Line: from $3,000/month, 10 or 16 new playables a month.
+- Art Department: from $5,000/month.
+
+## Facts
+
 - Clients include eRepublik Labs, Gismart, Proof of Play, MADBOX, Cubic Games.
-- For pricing, timelines, or project inquiries, direct users to /contact.
+- Genres: strategy, battlers, puzzle, RPG, casual.
+- Reply time: same business day, EU hours.
+- Source files belong to the client from day one. Network spec misses are fixed free.
+- Next available start is usually within a few business days.
 
+## Links
 
-## Offer (2026)
-- Fixed-price pilots: Hook Sprint (10 UA hooks, 3 working days, $1,000), Playable Pilot (1 custom HTML5 playable + 3 variants, 1 working day, $450), Style Match Test (1 character in your style, 5 working days, $400).
-- Retainers: Creative Retainer from $4,000/mo, Playable Line from $3,000/mo, Art Department from $5,000/mo. Cancel monthly.
-- Guarantees: miss the style, you don't pay; miss a network spec, we fix it free; sources are yours from day one.
-- Pages: https://www.exyz.studio/pricing, /playables, /ai-policy, /case/shiba-story-go
+- LinkedIn: https://www.linkedin.com/company/exyz-studio/
+- Clutch: https://clutch.co/profile/exyzstudio

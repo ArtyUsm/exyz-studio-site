@@ -3,11 +3,6 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet>
 <title>Contact EXYZ.Studio · Game Art & Video Production Partner</title>
 <meta name="description" content="Get in touch with EXYZ.Studio about game asset production, video creatives, or playable ads for your mobile game.">
 <link rel="canonical" href="https://www.exyz.studio/contact">
@@ -19,14 +14,22 @@
 <meta property="og:description" content="Get in touch with EXYZ.Studio about game asset production, video creatives, or playable ads for your mobile game.">
 <meta property="og:url" content="https://www.exyz.studio/contact">
 <meta property="og:image" content="https://www.exyz.studio/og-default.jpg">
-<link rel="icon" type="image/png" sizes="512x512" href="/favicon.png">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Contact EXYZ.Studio · Game Art & Video Production Partner">
 <meta name="twitter:description" content="Get in touch with EXYZ.Studio about game asset production, video creatives, or playable ads for your mobile game.">
 <meta name="twitter:image" content="https://www.exyz.studio/og-default.jpg">
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.exyz.studio/#org","name":"EXYZ.Studio","url":"https://www.exyz.studio/","logo":"https://www.exyz.studio/exyz-logo.png","image":"https://www.exyz.studio/og-default.jpg","description":"Game art and UA creatives for mobile games from one team: characters, environments, Spine animation, video hooks and playable ads, built from the same source files.","address":{"@type":"PostalAddress","addressLocality":"Riga","addressCountry":"LV"},"areaServed":"Worldwide","knowsAbout":["Game art outsourcing","2D game art","Spine animation","Character design","UA creatives","Video ads for mobile games","Playable ads","HTML5 playables"],"sameAs":["https://www.linkedin.com/company/exyz-studio/","https://www.instagram.com/exyz.studio/","https://clutch.co/profile/exyzstudio"]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.exyz.studio/"},{"@type":"ListItem","position":2,"name":"Contact","item":"https://www.exyz.studio/contact"}]}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ContactPage", "name": "Contact EXYZ.Studio", "url": "https://www.exyz.studio/contact"}</script>
+<meta property="og:locale" content="en_US">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -46,8 +49,6 @@
 .exyz-viewmore:hover{ border-color:rgba(255,255,255,0.4) !important; color:#f2f2f0 !important; }
 @media (max-width:700px){ header .exyz-nav{ flex-wrap:nowrap !important; overflow-x:auto; width:100%; justify-content:flex-start !important; gap:4px 18px !important; scrollbar-width:none; } header .exyz-nav::-webkit-scrollbar{ display:none; } header .exyz-nav a:not(.exyz-btn-a){ font-size:.72rem !important; padding:11px 0 !important; white-space:nowrap; flex-shrink:0; } }
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "EXYZ.Studio", "url": "https://www.exyz.studio/", "logo": "https://www.exyz.studio/logo.png", "address": {"@type": "PostalAddress", "addressLocality": "Riga", "addressCountry": "LV"}, "description": "EXYZ.Studio designs 2D/3D game assets and produces video creatives, playable ads, and trailers for mobile game studios.", "areaServed": "Worldwide", "knowsAbout": ["Game asset production", "2D game art", "3D game art", "Video creatives for mobile games", "Playable ads", "UGC ads", "3D animation", "Motion graphics"], "sameAs": ["https://www.linkedin.com/company/exyz-studio/", "https://www.instagram.com/exyz.studio/"]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ContactPage", "name": "Contact EXYZ.Studio", "url": "https://www.exyz.studio/contact"}</script>
 <script>
   window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
 </script>
@@ -61,7 +62,7 @@
   gtag('config', 'G-EL9JRFLK14');
 </script>
 <script>(function(){
-function label(){var d=new Date();if(d.getHours()>=18)d.setDate(d.getDate()+1);return d.toLocaleDateString('en-US',{month:'long',day:'numeric'});}
+function label(){var d=new Date();d.setDate(d.getDate()+3);while(d.getDay()===0||d.getDay()===6)d.setDate(d.getDate()+1);return d.toLocaleDateString('en-US',{month:'long',day:'numeric'});}
 function fill(){var v=label();document.querySelectorAll('[data-next-start]').forEach(function(el){if(el.textContent!==v)el.textContent=v;});}
 fill();new MutationObserver(fill).observe(document.documentElement,{childList:true,subtree:true});
 setInterval(fill,60000);
@@ -92,7 +93,7 @@ setInterval(fill,60000);
     <section aria-label="Intro" style="max-width:1240px;margin:0 auto;padding:64px 32px 36px;">
       <h1 style="font-family:'Space Grotesk',sans-serif;font-weight:800;line-height:1;letter-spacing:-0.02em;margin:0;font-size:clamp(2.6rem,6vw,4.6rem);text-transform:uppercase;">Start with a pilot</h1>
       <p style="max-width:56ch;font-size:1.05rem;color:#b7b7b7;margin:22px 0 0;">Tell us what you need. We reply the same business day, EU hours, with a scope, a price and a start date.</p>
-      <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:24px;"><a href="https://calendly.com/exyz-studio" class="exyz-btn-a" style="display:inline-block;padding:15px 26px;font-family:'JetBrains Mono',monospace;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;border-radius:5px;background:#eb6c2b;color:#0a0a0b;font-weight:700;text-decoration:none;transition:background .15s;">Book a 20-min scoping call</a><span style="font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.04em;color:#9b9b9b;">or use the form below · Next available start: <span data-next-start="" style="color:#f2f2f0;">October 6</span></span></div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:24px;"><a href="https://calendly.com/exyz-studio" class="exyz-btn-a" style="display:inline-block;padding:15px 26px;font-family:'JetBrains Mono',monospace;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;border-radius:5px;background:#eb6c2b;color:#0a0a0b;font-weight:700;text-decoration:none;transition:background .15s;">Book a 20-min discovery call</a><span style="font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.04em;color:#9b9b9b;">or use the form below · Next available start: <span data-next-start="" style="color:#f2f2f0;">October 6</span></span></div>
     </section>
 
     <section aria-labelledby="form-h" style="max-width:1240px;margin:0 auto;padding:36px 32px 96px;">
@@ -106,12 +107,12 @@ setInterval(fill,60000);
               <option value="" disabled selected>Select a product</option>
               <option value="hook-concepts">3 free hook concepts (48h)</option>
               <option value="hook-sprint">Hook Sprint: 10 hooks, 3 days, $1,000</option>
-              <option value="playable-pilot">Playable Pilot: 1 playable + 3 variants, 1 day, $450</option>
+              <option value="playable-pilot">Playable Pilot: 1 playable + 3 variants, 2–3 days, $450</option>
               <option value="style-match">Style Match Test: 1 character, 5 days, $400</option>
               <option value="creative-retainer">Creative Retainer: from $4,000/mo</option>
               <option value="playable-line">Playable Line: from $3,000/mo</option>
               <option value="art-department">Art Department: from $5,000/mo</option>
-              <option value="end-card">Interactive End Card: from $250</option>
+              <option value="end-card">Interactive Video: from $250</option>
               <option value="launch">Launch Package / From Concept Doc: custom</option>
               <option value="ai-policy">Full AI policy &amp; tool list</option>
               <option value="not-sure">Not sure yet</option>
@@ -137,8 +138,8 @@ setInterval(fill,60000);
             <label for="budget" style="font-family:'JetBrains Mono',monospace;letter-spacing:0.06em;text-transform:uppercase;font-size:.72rem;color:#9b9b9b;">Budget Range
               <select id="budget" name="budget" class="exyz-input" style="width:100%;margin-top:8px;padding:13px 14px;background:#141416;border:1px solid rgba(255,255,255,0.12);color:#f2f2f0;border-radius:6px;font-family:'IBM Plex Sans',sans-serif;font-size:.95rem;box-sizing:border-box;">
                 <option value="" disabled selected>Select budget range</option>
-                <option>Under $2,000 (pilot)</option>
-                <option>Under $5,000</option>
+                <option>Pilot ($400–1,000)</option>
+                <option>$1,000 – $5,000</option>
                 <option>$5,000 – $20,000</option>
                 <option>$20,000 – $50,000</option>
                 <option>$50,000+</option>
@@ -164,7 +165,7 @@ setInterval(fill,60000);
             <span style="display:block;font-family:'JetBrains Mono',monospace;letter-spacing:0.06em;text-transform:uppercase;font-size:.72rem;color:#eb6c2b;margin:22px 0 10px;">Response Time</span>
             <p style="margin:0;color:#b7b7b7;font-size:.92rem;">Same business day, EU hours. Daily progress updates on retainers.</p>
             <span style="display:block;font-family:'JetBrains Mono',monospace;letter-spacing:0.06em;text-transform:uppercase;font-size:.72rem;color:#eb6c2b;margin:22px 0 10px;">Zero-risk start</span>
-            <p style="margin:0;color:#b7b7b7;font-size:.92rem;">Pilots are fixed-price and fixed-date. Miss the style, you don't pay. Miss a network spec, we fix it free. Retainers cancel monthly. Sources are yours from day one.</p>
+            <p style="margin:0;color:#b7b7b7;font-size:.92rem;">Pilots are fixed-price and fixed-date. Miss the style after 2 revision rounds, full refund. Miss a network spec, we fix it for free. Source files are yours from day one.</p>
             <div style="border-top:1px solid rgba(255,255,255,0.08);margin:22px 0;"></div>
             <span style="display:block;font-family:'JetBrains Mono',monospace;letter-spacing:0.06em;text-transform:uppercase;font-size:.72rem;color:#9b9b9b;margin-bottom:14px;">Follow Us</span>
             <div style="display:flex;gap:12px;">
@@ -202,6 +203,7 @@ setInterval(fill,60000);
         <div>
           <h4 style="font-family:'JetBrains Mono',monospace;letter-spacing:0.04em;text-transform:uppercase;font-size:.78rem;color:#8a8a8a;margin:0 0 16px;">Social</h4>
           <a href="https://www.linkedin.com/company/exyz-studio/" target="_blank" rel="noopener" class="exyz-foot-link" style="display:block;color:#c7c7c7;font-size:.88rem;padding:5px 0;text-decoration:none;transition:color .15s;white-space:nowrap;">LinkedIn</a>
+          <a href="https://clutch.co/profile/exyzstudio" target="_blank" rel="noopener" class="exyz-foot-link" style="display:block;color:#c7c7c7;font-size:.88rem;padding:5px 0;text-decoration:none;transition:color .15s;white-space:nowrap;">Clutch</a>
           <a href="https://www.instagram.com/exyz.studio/" target="_blank" rel="noopener" class="exyz-foot-link" style="display:block;color:#c7c7c7;font-size:.88rem;padding:5px 0;text-decoration:none;transition:color .15s;white-space:nowrap;">Instagram</a>
         </div>
       </div>

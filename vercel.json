@@ -43,6 +43,15 @@
   ],
   "headers": [
     {
+      "source": "/kingdomsurvival",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
       "source": "/play/(.*)",
       "headers": [
         {
@@ -50,9 +59,22 @@
           "value": "noindex, nofollow"
         }
       ]
+    },
+    {
+      "source": "/(llms.txt|robots.txt|sitemap.xml)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
+      ]
     }
   ],
   "rewrites": [
+    {
+      "source": "/kingdomsurvival",
+      "destination": "/play/kingdom-survival/index.html"
+    },
     {
       "source": "/",
       "destination": "/index.dc.html"
@@ -85,5 +107,6 @@
       "source": "/case/shiba-story-go",
       "destination": "/case-shiba-story-go.dc.html"
     }
-  ]
+  ],
+  "trailingSlash": false
 }
